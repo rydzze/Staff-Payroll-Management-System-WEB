@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2024 at 06:19 PM
+-- Generation Time: Jun 06, 2024 at 05:30 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,6 +33,13 @@ CREATE TABLE `admin` (
   `admin_name` varchar(75) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_ID`, `admin_pwd`, `admin_name`) VALUES
+('admin', 'root', 'Admin');
+
 -- --------------------------------------------------------
 
 --
@@ -61,7 +68,7 @@ CREATE TABLE `person` (
   `staff_ID` varchar(4) NOT NULL,
   `person_fname` varchar(50) NOT NULL,
   `person_lname` varchar(50) NOT NULL,
-  `person_age` date NOT NULL,
+  `person_age` int(11) NOT NULL,
   `person_birthdate` date NOT NULL,
   `person_email` varchar(75) NOT NULL,
   `person_phonenum` varchar(15) NOT NULL,
