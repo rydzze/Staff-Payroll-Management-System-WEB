@@ -13,7 +13,7 @@
         <h1>Staff Payroll Management System</h1>
         <nav>
             <ul>
-                <li><a href="../pages/home.php">Home</a></li>
+                <li><a href="../pages/dashboard.php">Home</a></li>
             </ul>
         </nav>
     </div>
