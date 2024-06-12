@@ -10,18 +10,18 @@
 
     <?php
         include '../includes/functions.php';
-        $adminIDs = selectAdminIDs();
+        $staffIDs = selectAllStaff();
 
-        if (!empty($adminIDs)) {
-            echo "<br><h2>Admin IDs</h2>";
+        if (!empty($staffIDs)) {
+            echo "<br><h2>Staff IDs</h2>";
             echo "<ul>";
-            foreach ($adminIDs as $adminID) {
-                echo "<li>Admin ID: " . $adminID . "</li>";
+            foreach ($staffIDs as $staffID) {
+                echo "<li>Staff ID: " . $staffID . "</li>";
             }
             echo "</ul>";
         }
         else {
-            echo "<p>No admin IDs found.</p>";
+            echo "<p>No staff IDs found.</p>";
         }
     ?>
 </body>

@@ -26,16 +26,16 @@
         }
     }
 
-    function selectAdminIDs(){
-        $sql = "SELECT admin_ID FROM admin";
+    function selectAllStaff(){
+        $sql = "SELECT staff_ID FROM staff";
         $result = executeQuery($sql);
 
         if($result->num_rows > 0){
-            $adminIDs = [];
+            $staffIDs = [];
             while($row = $result->fetch_assoc()){
-                $adminIDs[] = $row["admin_ID"];
+                $staffIDs[] = $row["staff_ID"];
             }
-            return $adminIDs;
+            return $staffIDs;
         }
         else{
             return [];

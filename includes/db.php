@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "twt_project";
+    $database = "spms";
 
     $conn = new mysqli($servername, $username, $password, $database);
 
