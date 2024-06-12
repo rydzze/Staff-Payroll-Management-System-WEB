@@ -9,7 +9,8 @@
 
 <body>
     <h2>Admin Login</h2>
-    <form action="../includes/login_process.php" method="post">
+    
+    <form action="../includes/login.php" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
         <label for="password">Password:</label>

@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPMS | Dashboard</title>
+    <title>SPMS | Payroll List</title>
 
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -23,10 +23,9 @@
 
     <div class="content">
         <?php include '../templates/header.html';?>
-
-        <h1>Welcome back!</h1>
-        <h2>Dashboard</h2>
         
+        <h2>Payroll List</h2>
+
         <?php include '../templates/footer.html';?>
     </div>
 </body>

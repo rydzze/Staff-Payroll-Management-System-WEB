@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($username) || empty($password)) {
         $_SESSION['error'] = "Username and password are required";
-        header("Location: ../pages/login.php");
+        header("Location: ../pages/login_page.php");
         exit();
     } else {
         if (validateAdminLogin($username, $password)) {
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } else {
             $_SESSION['error'] = "Invalid username or password";
-            header("Location: ../pages/login.php");
+            header("Location: ../pages/login_page.php");
             exit();
         }
     }

@@ -10,22 +10,6 @@
         return $result;
     }
 
-    function selectAdminIDs(){
-        $sql = "SELECT admin_ID FROM admin";
-        $result = executeQuery($sql);
-
-        if($result->num_rows > 0){
-            $adminIDs = [];
-            while($row = $result->fetch_assoc()){
-                $adminIDs[] = $row["admin_ID"];
-            }
-            return $adminIDs;
-        }
-        else{
-            return [];
-        }
-    }
-
     function validateAdminLogin($admin_ID, $admin_pwd){
         global $conn;
         $admin_ID = $conn->real_escape_string($admin_ID);
@@ -39,6 +23,22 @@
         }
         else{
             return false;
+        }
+    }
+
+    function selectAdminIDs(){
+        $sql = "SELECT admin_ID FROM admin";
+        $result = executeQuery($sql);
+
+        if($result->num_rows > 0){
+            $adminIDs = [];
+            while($row = $result->fetch_assoc()){
+                $adminIDs[] = $row["admin_ID"];
+            }
+            return $adminIDs;
+        }
+        else{
+            return [];
         }
     }
 ?>
