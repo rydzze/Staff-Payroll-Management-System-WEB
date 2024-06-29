@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | Payroll List</title>
 
+    <link rel="stylesheet" href="css/payroll_list.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -14,6 +15,8 @@
 
     <section class="content">
         <h2>Payroll List</h2>
+
+        <?php include 'includes/payroll_list.php';?>
     </section>
 </body>
 
