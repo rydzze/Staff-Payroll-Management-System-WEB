@@ -1,0 +1,63 @@
+.header {
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#FFFFFF;
+    background-color: #4A85F6;
+}
+  
+.heading {
+    display: inline-block;
+    margin-top: 1.5%;
+    margin-left: 70px;
+    width: auto;
+}
+
+.profiledropdown {
+    float: right;
+    font-size: 25px;
+    margin-top: 1.5%;
+    margin-right: 2%;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.dropdown {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    right: 0%;
+    margin-right: 2%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+  }
+  
+.profiledropdown:hover .dropdown-content {
+    display: block;
+}
