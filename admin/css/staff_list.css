@@ -1,6 +1,7 @@
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
 th, td {
@@ -21,11 +22,37 @@ tr:hover {
   background-color: #f1f1f1;
 }
 
-td a {
-  color: #007bff;
+a {
+  color: #3498db;
   text-decoration: none;
 }
 
-td a:hover {
+a:hover {
   text-decoration: underline;
+}
+
+.form-buttons {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.back-link {
+  display: block;
+  margin-top: 5px;
+  text-align: left;
+  color: #3498db;
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: #2980b9;
 }
