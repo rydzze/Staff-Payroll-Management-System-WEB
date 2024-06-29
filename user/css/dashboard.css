@@ -7,42 +7,12 @@
     display: flex;
     height: 100vh;
 }
-.sidebar {
-    width: 200px;
-    background-color: white;
-    padding: 20px;
-}
+
 .main {
     flex: 1;
     padding: 20px;
     background-color: #f2f2f2;
 }
-.header {
-    background-color: #4CAF50;
-    color: #f2f2f2;
-    padding: 10px 20px;
-
-}
-.header h1 {
-    margin: 0;
-}
-.sidebar-item {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color:white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.sidebar-item:hover {
-    background-color: white;
-}
-
-.sidebar-item img {
-    height: 30px;
-    width: auto;
-}
-
 .bulletin-board {
     background-color: white;
     border: 1px solid #ddd;
