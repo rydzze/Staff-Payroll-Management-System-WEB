@@ -1,0 +1,32 @@
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+.bulletin-board {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-left: 350px;
+    height:500px;
+    width:500px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.announcement {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
