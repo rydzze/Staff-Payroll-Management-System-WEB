@@ -3,5 +3,6 @@
 
     <ul>
         <li><a href="dashboard.php">Home</a></li>
+        <li><a href="viewpayroll.php">Payroll</a></li>
     </ul>
 </div>
