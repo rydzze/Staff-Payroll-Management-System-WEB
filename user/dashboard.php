@@ -12,26 +12,18 @@
 
 <body>
     <?php include 'templates/sidebar.php';?>
-<main>
-            <div class="main">
-                <div class="bulletin-board">
-                    <div class="title">
-                    </div>
-                    <div class="content">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptas!
-                        </p>
-                    </div>
-                </div>
-                <div class="announcement">
-                    <h3>Announcement</h3>
-                    <p>
-                        Bla bla bla
-                    </p>
-                </div>
+    <section class="content"> 
+            <div class="bulletin-board">
+                <h2>Bulletin Board</h2>
+                <p>Announcement goes here...</p>
+            </div>
+    </section>
+            <div class="announcement">
+                <h3>Announcement</h3>
+                <p>Bla bla bla</p>
             </div>
         </div>
-
+    </div>
 </body>
 
 </html>

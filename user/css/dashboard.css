@@ -9,24 +9,23 @@
 }
 
 .main {
-    flex: 1;
     padding: 20px;
     background-color: #f2f2f2;
 }
 .bulletin-board {
-    background-color: white;
-    border: 1px solid #ddd;
-    margin-left: 350px;
-    height:500px;
-    width:500px;
+    background-color: rgb(50, 32, 32);
+    border: 2px solid #ddd;
+    height:50px;
+    width:50px;
     padding: 20px;
     border-radius: 10px;
+    margin-top:-400px;
 }
 .announcement {
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    margin-top: 20px;
+    width: 50px; /* added this to make it full width */
+    height: auto; /* changed this to auto to make it dynamic */
 }
 

@@ -1,8 +1,8 @@
 <div class="sidebar">
-    <h2>Main Menu</h2>
 
     <ul>
-        <li><a href="dashboard.php">Home</a></li>
-        <li><a href="viewpayroll.php">Payroll</a></li>
+        <li><img src="img/staff.png"><a href="dashboard.php">Staff</a></li>
+        <li><img src="img/about.png"><a href="about.php">About</a></li>
+        <li><img src="img/payroll.png"><a href="viewpayroll.php">Payroll</a></li>
     </ul>
 </div>
