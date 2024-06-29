@@ -1,31 +1,44 @@
   body {
+    display: contents;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-}
-.container {
-    display: flex;
-    height: 100vh;
 }
 
 .main {
     padding: 20px;
     background-color: #f2f2f2;
 }
+
+
+.bulletin {
+    margin-top:150px;
+    margin-left:590px;
+    height: 100px;
+    display:flex;
+}
+
+
 .bulletin-board {
-    background-color: rgb(50, 32, 32);
-    border: 2px solid #ddd;
-    height:50px;
-    width:50px;
+    background-color: rgb(192, 115, 115);
+    border: 2px solid #100d0d;
+    height:350px;
+    width:600px;
     padding: 20px;
     border-radius: 10px;
-    margin-top:-400px;
 }
+
+.announce {
+    margin-top:350px;
+    margin-left:390px;
+    height: 100px;
+}
+
 .announcement {
-    background-color: #fff;
+    background-color: #412525;
     padding: 20px;
     border-radius: 5px;
-    width: 50px; /* added this to make it full width */
-    height: auto; /* changed this to auto to make it dynamic */
+    width: 1050px; /* added this to make it full width */
+    height: 169px; /* changed this to auto to make it dynamic */
 }
 

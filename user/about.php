@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="css/about.css">
 </head>
 
-<body>
+
+    <?php include 'templates/header.php';?>
     <?php include 'templates/sidebar.php';?>
 
+<body>
     <section class="content"> 
-        <h2>About Our Payroll Management System</h2>
+        <br><br><br><br><br><br><br><h2>About Our Payroll Management System</h2>
         <p>Our Payroll Management System is a comprehensive and user-friendly solution designed to 
            simplify and streamline payroll processing for businesses of all sizes. Our system is built
            to provide accuracy, efficiency, and reliability, ensuring that your employees are paid correctly and on time.</p><br>
@@ -38,7 +40,7 @@
            get the most out of our system.</p><br>
 
         <h3>If you have any questions or would like to learn more about our Payroll Management System, 
-            please don't hesitate to contact us.</h3>
+            please don't hesitate to contact us.</h3><br><br>
     </section>
 </body>
 

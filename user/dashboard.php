@@ -10,20 +10,24 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
-<body>
+
+    <?php include 'templates/header.php';?>
     <?php include 'templates/sidebar.php';?>
-    <section class="content"> 
-            <div class="bulletin-board">
-                <h2>Bulletin Board</h2>
-                <p>Announcement goes here...</p>
-            </div>
+
+<body>    
+    <section class="bulletin"> 
+        <div class="bulletin-board">
+            <h2>Bulletin Board</h2>
+            <p>Announcement goes here...</p>
+        </div><br>
     </section>
-            <div class="announcement">
-                <h3>Announcement</h3>
-                <p>Bla bla bla</p>
-            </div>
+
+    <section class="announce">
+        <div class="announcement">
+            <h3>Announcement</h3>
+            <p>Bla bla bla</p>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
