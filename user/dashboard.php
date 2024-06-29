@@ -16,7 +16,6 @@
             <div class="main">
                 <div class="bulletin-board">
                     <div class="title">
-                        <i class="fas fa-chevron-left"></i> Bulletin Board <i class="fas fa-chevron-right"></i>
                     </div>
                     <div class="content">
                         <p>
