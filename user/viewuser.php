@@ -13,7 +13,7 @@
     <?php include 'templates/sidebar.php';?>
 
     <section class="content"> 
-        <h1>View Payroll</h1>
+        <h1>viewuser</h1>
         
     </section>
 </body>

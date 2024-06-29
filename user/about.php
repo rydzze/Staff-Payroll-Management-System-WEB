@@ -7,6 +7,7 @@
     <title>SPMS | View Payroll</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
@@ -30,11 +31,11 @@
            Efficiency: Our system is designed to simplify payroll processing, reducing the time and effort required to manage your payroll.
            Security: We take the security of your data seriously, implementing robust measures to protect your sensitive information.
            Innovation: We continuously update and improve our system to ensure you have access to the latest features and technologies.
-        </p>
+        </p><br>
         <h2>Our Team</h2>
         <p>Our team of experts has years of experience in payroll management, software development, and customer support.
            We are dedicated to providing exceptional service, ensuring that our clients receive the assistance they need to 
-           get the most out of our system.</p>
+           get the most out of our system.</p><br>
 
         <h3>If you have any questions or would like to learn more about our Payroll Management System, 
             please don't hesitate to contact us.</h3>
