@@ -9,7 +9,7 @@ body {
     position:static;
     height: 100px;
     width: 300px;
-    margin-top:200px;
+    margin-top:140px;
     margin-left: 800px;
 }
 
@@ -19,9 +19,84 @@ body {
 }
 
 .profile h1 {
-    text-align:end;
+    font-size:30px;
+    margin-top: 0px;
+    margin-right: 60%;
+    margin-left: 10%;
+    height: auto;
+    width: max-content;
+}
 
 .profile p {
-    font-size: small;
-    text-align: center;
+    font-size:18px;
+    margin-top:-15px;
+    margin-right: 40%;
+    margin-left: 55%;
+    width: max-content;
+    color: #7E7878;
 }
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .card0 {
+    background-color: white;
+    position:static;
+    height: 80px;
+    width: 600px;
+    margin-top:200px;
+    margin-left: 630px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .card1 {
+    background-color: white;
+    position:static;
+    height: 80px;
+    width: 250px;
+    margin-top:15px;
+    margin-left: 460px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .card2 {
+    background-color: white;
+    position:static;
+    height: 80px;
+    width: 250px;
+    margin-top:15px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .card3 {
+    background-color: white;
+    position:static;
+    height: 80px;
+    width: 250px;
+    margin-top:15px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:-20px;
+    color:#8F9BB3;
+  }
+
+ .card-content {
+    margin-right: 10%;
+ }
