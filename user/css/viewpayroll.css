@@ -1,0 +1,47 @@
+body {
+    display: contents;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+}
+
+.payrolllist{
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content{
+    margin-top: 150px;
+}
+
+.content h1{
+    color: #4A85F6;
+}
+
+.content h2{
+    padding: 2% 0% 0% 2%;
+}
+
+table img{
+    width: 30%;
+}
+
+th{
+    padding: 2% 0%;
+    background-color: #EFF4FA;
+    border-color: #EFF4FA;
+}
+
+td:first-child{
+    width: 30%;
+}
+
+td:last-child {
+    width: 20%;
+}
+
+tr{
+    text-align: center;
+}

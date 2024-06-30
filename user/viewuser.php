@@ -1,3 +1,5 @@
+<?php include 'includes/session_start.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,20 +17,21 @@
     <?php include 'templates/sidebar.php';?>
 
     <section class="content"> 
-    <div class="profile">
-        <img src="img/profile.png"> 
-        <h1>Muhammad Ali</h1>   
-        <p>Staff ID : 1221301131 </p>    
-    </div>
+      <div class="profile">
+          <img src="img/profile.png"> 
+          <h1>Muhammad Ali</h1>   
+          <p>Staff ID : 1221301131 </p>    
+      </div>
     </section>
+
     <section class="info">
-                <div class="card0">
-                  <div class="card-title"><br>Residential Address</div>
-                  <div class="card-content">
-                    <h3>No. 12, Jalan Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.</h3>
-                  </div>
-                  </div>
-                </div>
+      <div class="card0">
+        <div class="card-title"><br>Residential Address</div>
+        <div class="card-content">
+          <h3>No. 12, Jalan Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.</h3>
+        </div>
+        </div>
+      </div>
 
     <table>
         <tr>

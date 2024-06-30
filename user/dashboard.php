@@ -1,3 +1,5 @@
+<?php include 'includes/session_start.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,14 +12,14 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
-
+<body>    
     <?php include 'templates/header.php';?>
     <?php include 'templates/sidebar.php';?>
 
-<body>    
     <section class="bulletin"> 
         <div class="bulletin-board">
             <h2>Bulletin Board</h2>
+            
             <p>Announcement goes here...</p>
         </div><br>
     </section>

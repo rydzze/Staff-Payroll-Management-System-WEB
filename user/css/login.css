@@ -67,7 +67,7 @@ table{
     padding-top: 7px;
 }
 
-.login button{
+.login #submitButton{
     margin-top: 5%;
     margin-bottom: 28px;
     margin-left: 35%;

@@ -2,7 +2,7 @@
     position: fixed;
     margin-top:120px;
     height: 100%;
-    width: 250px;
+    width: 200px;
     background-color: white;
     color: black;
     padding: 20px;
@@ -16,26 +16,26 @@
 
 .sidebar ul li {
     margin-bottom: 10px;
+    display: flex;
+    align-items: column;
 }
 
 .sidebar ul li img {
-    width: 50px; /* adjust the width to your liking */
-    height: 50px; /* adjust the height to your liking */
-    margin-right: -20px; /* add some space between the image and the text */
-    margin-top: -16px;
-    vertical-align: middle;
+    width: 25%;
+    margin-right: 25px;
 }
 
 .sidebar ul li a {
     color: #757575;
     text-decoration: none;
-    display: inline-block; 
-    padding: 50px; 
+    display: flex;
+    align-items: center;
+    padding: 25px; 
     transition: background-color 0.3s ease; 
 }
  
 a {
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .sidebar ul li a:hover {
