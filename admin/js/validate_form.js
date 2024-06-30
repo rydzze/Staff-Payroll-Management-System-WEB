@@ -37,7 +37,7 @@ function synchronizeBirthdate(ic) {
   var day = ic.substring(4, 6);
 
   // Assume year < 50 is 2000s and year >= 50 is 1900s
-  year = parseInt(year) < 25 ? '20' + year : '19' + year;
+  year = parseInt(year) < 50 ? '20' + year : '19' + year;
 
   return `${year}-${month}-${day}`;
 }
@@ -57,56 +57,56 @@ function validateForm() {
   // Synchronize birthdate with IC
   var synchronizedBirthdate = synchronizeBirthdate(ic);
   if (synchronizedBirthdate) {
-      document.getElementById('birthdate').value = synchronizedBirthdate;
+    document.getElementById('birthdate').value = synchronizedBirthdate;
   }
 
   if (!validateIC(ic)) {
-      displayError('ic', 'Invalid IC');
-      isValid = false;
+    displayError('ic', 'Invalid IC');
+    isValid = false;
   } else {
-      clearError('ic');
+    clearError('ic');
   }
 
   if (!validateName(firstName)) {
-      displayError('first_name', 'Invalid First Name');
-      isValid = false;
+    displayError('first_name', 'Invalid First Name');
+    isValid = false;
   } else {
-      clearError('first_name');
+    clearError('first_name');
   }
 
   if (!validateName(lastName)) {
-      displayError('last_name', 'Invalid Last Name');
-      isValid = false;
+    displayError('last_name', 'Invalid Last Name');
+    isValid = false;
   } else {
-      clearError('last_name');
+    clearError('last_name');
   }
 
   if (!validateAge(age)) {
-      displayError('age', 'Invalid Age');
-      isValid = false;
+    displayError('age', 'Invalid Age');
+    isValid = false;
   } else {
-      clearError('age');
+    clearError('age');
   }
 
   if (!validateBirthdate(birthdate)) {
-      displayError('birthdate', 'Invalid Birthdate');
-      isValid = false;
+    displayError('birthdate', 'Invalid Birthdate');
+    isValid = false;
   } else {
-      clearError('birthdate');
+    clearError('birthdate');
   }
 
   if (!validateEmail(email)) {
-      displayError('email', 'Invalid Email');
-      isValid = false;
+    displayError('email', 'Invalid Email');
+    isValid = false;
   } else {
-      clearError('email');
+    clearError('email');
   }
 
   if (!validatePhoneNumber(phoneNumber)) {
-      displayError('phone_number', 'Invalid Phone Number');
-      isValid = false;
+    displayError('phone_number', 'Invalid Phone Number');
+    isValid = false;
   } else {
-      clearError('phone_number');
+    clearError('phone_number');
   }
 
   return isValid;
@@ -135,10 +135,10 @@ document.getElementById('editButton').addEventListener('click', function () {
   var detailValues = document.querySelectorAll('.detailValue');
   var detailInputs = document.querySelectorAll('.detailInput');
   detailValues.forEach(function (element) {
-      element.style.display = 'none';
+    element.style.display = 'none';
   });
   detailInputs.forEach(function (element) {
-      element.style.display = 'inline';
+    element.style.display = 'inline';
   });
   document.getElementById('editButton').style.display = 'none';
   document.getElementById('confirmButton').style.display = 'inline';
@@ -150,20 +150,27 @@ document.getElementById('cancelButton').addEventListener('click', function () {
   var detailValues = document.querySelectorAll('.detailValue');
   var detailInputs = document.querySelectorAll('.detailInput');
   detailValues.forEach(function (element) {
-      element.style.display = 'inline';
+    element.style.display = 'inline';
   });
   detailInputs.forEach(function (element) {
-      element.style.display = 'none';
-      element.value = element.defaultValue; // Reset input values to default
+    element.style.display = 'none';
+    element.value = element.defaultValue; // Reset input values to default
+  });
+  document.querySelectorAll('.error-message').forEach(function (element) {
+    element.style.display = 'none';
+  });
+  document.querySelectorAll('.error').forEach(function (element) {
+    element.classList.remove('error');
   });
   document.getElementById('editButton').style.display = 'inline';
   document.getElementById('confirmButton').style.display = 'none';
   document.getElementById('cancelButton').style.display = 'none';
 });
 
-// Event listener to validate form on confirm button click
+// Event listener to validate form on form submit
 document.getElementById('staffDetailsForm').addEventListener('submit', function (event) {
   if (!validateForm()) {
-      event.preventDefault(); // Prevent form submission if validation fails
+    event.preventDefault(); // Prevent form submission if validation fails
   }
 });
+

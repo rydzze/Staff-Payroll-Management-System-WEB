@@ -49,6 +49,7 @@
 
         .error-message {
             color: red;
+            font-size: 0.8em;
             display: none;
         }
 
