@@ -16,8 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $staff_department = $_POST['department'];
     $staff_position = $_POST['position'];
     $staff_basicsalary = $_POST['basic_salary'];
-    $staff_status = $_POST['status'];  // This field is read-only and should not be updated
-    $staff_hireddate = $_POST['hire_date'];  // This field is read-only and should not be updated
+    $staff_status = $_POST['status'];  
+    $staff_hireddate = $_POST['hire_date'];  
 
     // Prepare and execute the update query for the person table
     $update_person_sql = "UPDATE person 

@@ -7,6 +7,34 @@
     <title>Edit Staff Details</title>
     <link rel="stylesheet" href="css/staff_edit.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #confirmButton {
+            padding: 10px 20px;
+            background-color: #10c622;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 16px;
+        }
+
+        #cancelButton {
+            padding: 10px 20px;
+            background-color: #fd4508;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        #confirmButton:hover {
+            background-color: #009b05;
+        }
+
+        #cancelButton:hover {
+            background-color: #ff0000;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,7 +69,7 @@
             <p>No details found for this staff member.</p>
         <?php endif; ?>
     </section>
-    <script src="js/validate_form.js"></script>
+    <script src="js/staff_edit_validate_form.js"></script>
 </body>
 
 </html>

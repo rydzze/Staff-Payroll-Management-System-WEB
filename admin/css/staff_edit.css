@@ -45,32 +45,6 @@ button:hover {
   background-color: #338eca;
 }
 
-#confirmButton {
-  padding: 10px 20px;
-  background-color: #10c622;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-left: 5px;
-}
-
-#cancelButton {
-  padding: 10px 20px;
-  background-color: #fd4508;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-left: 5px;
-}
-
-#confirmButton:hover {
-  background-color: #009b05;
-}
-
-#cancelButton:hover {
-  background-color: #ff0000;
-}
-
 .error-message {
   color: red;
   font-size: 0.8em;
