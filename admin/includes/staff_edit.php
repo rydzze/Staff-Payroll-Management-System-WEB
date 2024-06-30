@@ -4,7 +4,6 @@ include 'db.php';
 $staff_ID = $_GET['staff_ID'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve the posted data
     $person_IC = $_POST['ic'];
     $person_fname = $_POST['first_name'];
     $person_lname = $_POST['last_name'];
@@ -19,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $staff_status = $_POST['status'];  
     $staff_hireddate = $_POST['hire_date'];  
 
-    // Prepare and execute the update query for the person table
     $update_person_sql = "UPDATE person 
                           SET person_IC=?, person_fname=?, person_lname=?, person_age=?, person_birthdate=?, person_email=?, person_phonenum=?, person_homeaddr=? 
                           WHERE staff_ID=?";
@@ -27,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("sssssssss", $person_IC, $person_fname, $person_lname, $person_age, $person_birthdate, $person_email, $person_phonenum, $person_homeaddr, $staff_ID);
     $stmt->execute();
 
-    // Prepare and execute the update query for the staff table
     $update_staff_sql = "UPDATE staff 
                          SET staff_department=?, staff_position=?, staff_basicsalary=? 
                          WHERE staff_ID=?";
@@ -35,13 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("ssss", $staff_department, $staff_position, $staff_basicsalary, $staff_ID);
     $stmt->execute();
 
-    // Redirect to the staff detail page
     header("Location: staff_detail.php?staff_ID=$staff_ID");
     exit();
 }
 
-// Fetch the current staff details
-$sql = "SELECT p.person_IC, p.person_fname, p.person_lname, p.person_age, p.person_birthdate, p.person_email, p.person_phonenum, p.person_homeaddr, s.staff_department, s.staff_position, s.staff_basicsalary, s.staff_hireddate, s.staff_status
+$sql = "SELECT p.person_IC, p.person_fname, p.person_lname, p.person_age, p.person_birthdate, p.person_email, p.person_phonenum, p.person_homeaddr, s.staff_department, s.staff_position, s.staff_basicsalary, s.staff_hireddate
         FROM person p
         INNER JOIN staff s ON p.staff_ID = s.staff_ID
         WHERE p.staff_ID = ?";
@@ -52,7 +47,6 @@ $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    // Prepare the details array for display and editing
     $details = [
         'Staff ID' => $staff_ID,
         'IC' => $row['person_IC'],
@@ -67,7 +61,6 @@ if ($result->num_rows > 0) {
         'Position' => $row['staff_position'],
         'Basic Salary' => $row['staff_basicsalary'],
         'Hire Date' => $row['staff_hireddate'],
-        'Status' => $row['staff_status'] ? 'Active' : 'Inactive'
     ];
 } else {
     $details = [];

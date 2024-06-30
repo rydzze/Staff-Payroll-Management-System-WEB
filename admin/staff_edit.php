@@ -4,44 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Staff Details</title>
-    <link rel="stylesheet" href="css/staff_edit.css">
+    <title>SPMS | Edit Staff Details</title>
+
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        #confirmButton {
-            padding: 10px 20px;
-            background-color: #10c622;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-left: 5px;
-            font-size: 16px;
-        }
-
-        #cancelButton {
-            padding: 10px 20px;
-            background-color: #fd4508;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-left: 5px;
-        }
-
-        #confirmButton:hover {
-            background-color: #009b05;
-        }
-
-        #cancelButton:hover {
-            background-color: #ff0000;
-        }
-    </style>
+    <link rel="stylesheet" href="css/staff_edit.css">
 </head>
 
 <body>
     <?php include 'templates/sidebar.php'; ?>
     <?php include 'includes/staff_edit.php'; ?>
+
     <section class="content">
-        <h2>Edit Staff Details</h2>
+        <h1>Edit Staff Details</h1>
 
         <?php if (!empty($details)) : ?>
             <form id="staffEditForm" method="post" action="staff_edit.php?staff_ID=<?php echo $staff_ID; ?>">
@@ -69,6 +43,7 @@
             <p>No details found for this staff member.</p>
         <?php endif; ?>
     </section>
+    
     <script src="js/staff_edit_validate_form.js"></script>
 </body>
 

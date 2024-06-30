@@ -1,0 +1,85 @@
+.header {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]{
+    background-color: #4CAF50;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="button"] {
+    background-color: #00000075;
+}
+input[type="button"]:hover {
+    background-color: #00000095;
+}
+
+input[readonly] {
+    background-color: #e9e9e9;
+}
+
+form label[for="birthdate"], form label[for="age"] {
+    margin-top: 20px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input.error {
+    border: 2px solid red;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gap {
+    padding: 0px 25px 0px 25px;
+}

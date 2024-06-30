@@ -5,9 +5,11 @@ $results_per_page = 15;
 $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
 $offset = ($current_page - 1) * $results_per_page;
 
-$sql = "SELECT payroll_ID, staff_ID, payroll_date
-        FROM payroll
-        ORDER BY payroll_ID DESC
+$sql = "SELECT p.payroll_ID, p.staff_ID, p.payroll_date
+        FROM payroll p
+        INNER JOIN staff s ON p.staff_ID = s.staff_ID
+        WHERE s.staff_status = 1
+        ORDER BY p.payroll_ID DESC
         LIMIT $offset, $results_per_page";
 $result = $conn->query($sql);
 

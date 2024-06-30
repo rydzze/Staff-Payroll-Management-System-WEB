@@ -1,8 +1,7 @@
-@import url('headfoot.css');
 @import url('sidebar.css');
 
 html {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica', Arial, sans-serif;
 }
 
 .content {

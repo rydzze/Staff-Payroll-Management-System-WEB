@@ -24,7 +24,9 @@ tr:hover {
 }
 
 .form-buttons {
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 button, a {
@@ -53,4 +55,31 @@ button:hover {
 
 .error {
   border-color: red;
+}
+
+#confirmButton {
+  padding: 10px 20px;
+  background-color: #10c622;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+#cancelButton {
+  padding: 10px 20px;
+  background-color: #fd4508;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#confirmButton:hover {
+  background-color: #009b05;
+}
+
+#cancelButton:hover {
+  background-color: #ff0000;
 }

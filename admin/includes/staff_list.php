@@ -8,6 +8,7 @@ $offset = ($current_page - 1) * $results_per_page;
 $sql = "SELECT p.staff_ID, p.person_fname, p.person_lname, s.staff_department, s.staff_position
         FROM person p
         INNER JOIN staff s ON p.staff_ID = s.staff_ID
+        WHERE s.staff_status = 1
         ORDER BY p.staff_ID ASC
         LIMIT $offset, $results_per_page";
 $result = $conn->query($sql);
@@ -54,7 +55,7 @@ if ($result->num_rows > 0) {
     echo "</div>";
 
 } else {
-    echo "0 results";
+    echo "No active staff found.";
 }
 
 $conn->close();

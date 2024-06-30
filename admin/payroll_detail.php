@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | Payroll Detail</title>
 
-    <link rel="stylesheet" href="css/payroll_detail.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/payroll_detail.css">
 </head>
 
 <body>
     <?php include 'templates/sidebar.php'; ?>
 
     <section class="content">
-        <h2>Payroll Detail</h2>
+        <h1>Payroll Detail</h1>
+
+        <a href="payrolls.php" >Back to Payroll List</a>
 
         <?php include 'includes/payroll_detail.php'; ?>
         
@@ -58,8 +60,6 @@
         <?php else : ?>
             <p>No detailed information found for the specified payroll ID.</p>
         <?php endif; ?>
-
-        <a href="payrolls.php">Back to Payroll List</a>
     </section>
 </body>
 
