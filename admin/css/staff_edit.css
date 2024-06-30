@@ -1,0 +1,82 @@
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.form-buttons {
+  margin-top: 20px;
+}
+
+button, a {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #3498db;
+}
+
+button:hover {
+  background-color: #338eca;
+}
+
+#confirmButton {
+  padding: 10px 20px;
+  background-color: #10c622;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#cancelButton {
+  padding: 10px 20px;
+  background-color: #fd4508;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#confirmButton:hover {
+  background-color: #009b05;
+}
+
+#cancelButton:hover {
+  background-color: #ff0000;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  display: none;
+}
+
+.error {
+  border-color: red;
+}

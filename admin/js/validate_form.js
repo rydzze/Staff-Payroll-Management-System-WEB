@@ -1,176 +1,152 @@
-// Function to validate IC (Example: IC should be 12 characters long)
+document.getElementById('confirmButton').addEventListener('click', validateForm);
+
+function showError(inputId, message) {
+    const errorElement = document.getElementById(`${inputId}-error`);
+    const inputElement = document.getElementById(inputId);
+
+    inputElement.classList.add('error');
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+}
+
+function hideError(inputId) {
+    const errorElement = document.getElementById(`${inputId}-error`);
+    const inputElement = document.getElementById(inputId);
+
+    inputElement.classList.remove('error');
+    errorElement.textContent = '';
+    errorElement.style.display = 'none';
+}
+
 function validateIC(ic) {
-  return ic.length === 12;
+    const icRegex = /^[0-9]{12}$/;
+    return icRegex.test(ic);
 }
 
-// Function to validate names (Example: Name should contain only letters and spaces)
 function validateName(name) {
-  return /^[A-Za-z\s]+$/.test(name);
+    return name.trim() !== '';
 }
 
-// Function to validate age (Example: Age should be between 1 and 119)
 function validateAge(age) {
-  return age > 0 && age < 200;
+    const ageRegex = /^(0|[1-9][0-9]?|1[01][0-9]|120)$/;
+    return ageRegex.test(age);
 }
 
-// Function to validate birthdate (Example: Birthdate should be a valid date)
-function validateBirthdate(birthdate) {
-  return !isNaN(Date.parse(birthdate));
-}
-
-// Function to validate email (Example: Simple email validation)
 function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
 }
 
-// Function to validate phone number (Example: Phone number should be between 10 and 15 digits)
 function validatePhoneNumber(phoneNumber) {
-  return /^\d{10,15}$/.test(phoneNumber);
+    const phoneRegex = /^[0-9]{10,15}$/;
+    return phoneRegex.test(phoneNumber);
 }
 
-// Function to synchronize birthdate with IC
-function synchronizeBirthdate(ic) {
-  if (ic.length !== 12) return null;
-
-  var year = ic.substring(0, 2);
-  var month = ic.substring(2, 4);
-  var day = ic.substring(4, 6);
-
-  // Assume year < 50 is 2000s and year >= 50 is 1900s
-  year = parseInt(year) < 50 ? '20' + year : '19' + year;
-
-  return `${year}-${month}-${day}`;
+function validateDepartment(department) {
+    return department.trim() !== '';
 }
 
-// Function to validate the entire form
-function validateForm() {
-  var isValid = true;
-
-  var ic = document.getElementById('ic').value;
-  var firstName = document.getElementById('first_name').value;
-  var lastName = document.getElementById('last_name').value;
-  var age = document.getElementById('age').value;
-  var birthdate = document.getElementById('birthdate').value;
-  var email = document.getElementById('email').value;
-  var phoneNumber = document.getElementById('phone_number').value;
-
-  // Synchronize birthdate with IC
-  var synchronizedBirthdate = synchronizeBirthdate(ic);
-  if (synchronizedBirthdate) {
-    document.getElementById('birthdate').value = synchronizedBirthdate;
-  }
-
-  if (!validateIC(ic)) {
-    displayError('ic', 'Invalid IC');
-    isValid = false;
-  } else {
-    clearError('ic');
-  }
-
-  if (!validateName(firstName)) {
-    displayError('first_name', 'Invalid First Name');
-    isValid = false;
-  } else {
-    clearError('first_name');
-  }
-
-  if (!validateName(lastName)) {
-    displayError('last_name', 'Invalid Last Name');
-    isValid = false;
-  } else {
-    clearError('last_name');
-  }
-
-  if (!validateAge(age)) {
-    displayError('age', 'Invalid Age');
-    isValid = false;
-  } else {
-    clearError('age');
-  }
-
-  if (!validateBirthdate(birthdate)) {
-    displayError('birthdate', 'Invalid Birthdate');
-    isValid = false;
-  } else {
-    clearError('birthdate');
-  }
-
-  if (!validateEmail(email)) {
-    displayError('email', 'Invalid Email');
-    isValid = false;
-  } else {
-    clearError('email');
-  }
-
-  if (!validatePhoneNumber(phoneNumber)) {
-    displayError('phone_number', 'Invalid Phone Number');
-    isValid = false;
-  } else {
-    clearError('phone_number');
-  }
-
-  return isValid;
+function validatePosition(position) {
+    return position.trim() !== '';
 }
 
-// Function to display error messages
-function displayError(fieldId, message) {
-  var field = document.getElementById(fieldId);
-  var errorDiv = document.getElementById(fieldId + '-error');
-  field.classList.add('error');
-  errorDiv.innerText = message;
-  errorDiv.style.display = 'block';
+function validateBasicSalary(basicSalary) {
+    return !isNaN(basicSalary) && basicSalary > 0;
 }
 
-// Function to clear error messages
-function clearError(fieldId) {
-  var field = document.getElementById(fieldId);
-  var errorDiv = document.getElementById(fieldId + '-error');
-  field.classList.remove('error');
-  errorDiv.innerText = '';
-  errorDiv.style.display = 'none';
+function autoCorrectBirthdate(ic) {
+    const birthdateInput = document.getElementById('birthdate');
+    const yearPrefix = parseInt(ic.substring(0, 2)) > new Date().getFullYear() % 100 ? '19' : '20';
+    const birthdate = yearPrefix + ic.substring(0, 2) + '-' + ic.substring(2, 4) + '-' + ic.substring(4, 6);
+    birthdateInput.value = birthdate;
 }
 
-// Event listener to show input fields and hide text values on edit button click
-document.getElementById('editButton').addEventListener('click', function () {
-  var detailValues = document.querySelectorAll('.detailValue');
-  var detailInputs = document.querySelectorAll('.detailInput');
-  detailValues.forEach(function (element) {
-    element.style.display = 'none';
-  });
-  detailInputs.forEach(function (element) {
-    element.style.display = 'inline';
-  });
-  document.getElementById('editButton').style.display = 'none';
-  document.getElementById('confirmButton').style.display = 'inline';
-  document.getElementById('cancelButton').style.display = 'inline';
-});
+function validateForm(event) {
+    event.preventDefault();
+    let isValid = true;
 
-// Event listener to cancel edit and revert to displaying text values
-document.getElementById('cancelButton').addEventListener('click', function () {
-  var detailValues = document.querySelectorAll('.detailValue');
-  var detailInputs = document.querySelectorAll('.detailInput');
-  detailValues.forEach(function (element) {
-    element.style.display = 'inline';
-  });
-  detailInputs.forEach(function (element) {
-    element.style.display = 'none';
-    element.value = element.defaultValue; // Reset input values to default
-  });
-  document.querySelectorAll('.error-message').forEach(function (element) {
-    element.style.display = 'none';
-  });
-  document.querySelectorAll('.error').forEach(function (element) {
-    element.classList.remove('error');
-  });
-  document.getElementById('editButton').style.display = 'inline';
-  document.getElementById('confirmButton').style.display = 'none';
-  document.getElementById('cancelButton').style.display = 'none';
-});
+    const ic = document.getElementById('ic').value;
+    if (!validateIC(ic)) {
+        showError('ic', 'IC must be in numeric value.');
+        isValid = false;
+    } else {
+        hideError('ic');
+        autoCorrectBirthdate(ic);
+    }
 
-// Event listener to validate form on form submit
-document.getElementById('staffDetailsForm').addEventListener('submit', function (event) {
-  if (!validateForm()) {
-    event.preventDefault(); // Prevent form submission if validation fails
-  }
-});
+    const firstName = document.getElementById('first_name').value;
+    if (!validateName(firstName)) {
+        showError('first_name', 'First name cannot be empty.');
+        isValid = false;
+    } else {
+        hideError('first_name');
+    }
 
+    const lastName = document.getElementById('last_name').value;
+    if (!validateName(lastName)) {
+        showError('last_name', 'Last name cannot be empty.');
+        isValid = false;
+    } else {
+        hideError('last_name');
+    }
+
+    const age = document.getElementById('age').value;
+    if (!validateAge(age)) {
+        showError('age', 'Age must be a number between 0 and 120.');
+        isValid = false;
+    } else {
+        hideError('age');
+    }
+
+    const email = document.getElementById('email').value;
+    if (!validateEmail(email)) {
+        showError('email', 'Invalid email format.');
+        isValid = false;
+    } else {
+        hideError('email');
+    }
+
+    const phoneNumber = document.getElementById('phone_number').value;
+    if (!validatePhoneNumber(phoneNumber)) {
+        showError('phone_number', 'Phone number must be between 10 to 15 digits.');
+        isValid = false;
+    } else {
+        hideError('phone_number');
+    }
+
+    const address = document.getElementById('address').value;
+    if (!validateName(address)) {
+        showError('address', 'Address cannot be empty.');
+        isValid = false;
+    } else {
+        hideError('address');
+    }
+
+    const department = document.getElementById('department').value;
+    if (!validateDepartment(department)) {
+        showError('department', 'Department cannot be empty.');
+        isValid = false;
+    } else {
+        hideError('department');
+    }
+
+    const position = document.getElementById('position').value;
+    if (!validatePosition(position)) {
+        showError('position', 'Position cannot be empty.');
+        isValid = false;
+    } else {
+        hideError('position');
+    }
+
+    const basicSalary = document.getElementById('basic_salary').value;
+    if (!validateBasicSalary(basicSalary)) {
+        showError('basic_salary', 'Basic salary must be a positive number.');
+        isValid = false;
+    } else {
+        hideError('basic_salary');
+    }
+
+    if (isValid) {
+        document.getElementById('staffEditForm').submit();
+    }
+}

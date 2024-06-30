@@ -20,77 +20,27 @@
         #editButton:hover {
             background-color: #338eca;
         }
-
-        #confirmButton {
-            padding: 10px 20px;
-            background-color: #06ff0a;
-            color: black;
-            border: none;
-            cursor: pointer;
-            margin-left: 5px;
-        }
-
-        #cancelButton {
-            padding: 10px 20px;
-            background-color: #fd4508;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-left: 5px;
-        }
-
-        #confirmButton:hover {
-            background-color: #00f308;
-        }
-
-        #cancelButton:hover {
-            background-color: #ff0000;
-        }
-
-        .error-message {
-            color: red;
-            font-size: 0.8em;
-            display: none;
-        }
-
-        .error {
-            border-color: red;
-        }
     </style>
 </head>
 
 <body>
     <?php include 'templates/sidebar.php'; ?>
-
+    <?php include 'includes/staff_detail.php'; ?>
     <section class="content">
         <h2>Staff Details</h2>
 
-        <?php include 'includes/staff_detail.php'; ?>
-
         <?php if (!empty($details)) : ?>
-            <form id="staffDetailsForm" method="post" action="staff_detail.php?staff_ID=<?php echo $staff_ID; ?>">
-                <table>
-                    <?php foreach ($details as $key => $value) : ?>
-                        <tr>
-                            <th><?php echo $key; ?></th>
-                            <td>
-                                <span class="detailValue"><?php echo $value; ?></span>
-                                <?php if ($key === 'Staff ID' || $key === 'Hire Date') : ?>
-                                    <input type="text" name="<?php echo strtolower(str_replace(' ', '_', $key)); ?>" value="<?php echo $value; ?>" readonly class="detailInput" style="display: none;">
-                                <?php else : ?>
-                                    <input type="text" id="<?php echo strtolower(str_replace(' ', '_', $key)); ?>" name="<?php echo strtolower(str_replace(' ', '_', $key)); ?>" value="<?php echo $value; ?>" class="detailInput" style="display: none;">
-                                    <div class="error-message" id="<?php echo strtolower(str_replace(' ', '_', $key)); ?>-error"></div>
-                                <?php endif; ?>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </table>
-                <div class="form-buttons">
-                    <button type="button" id="editButton">Edit</button>
-                    <button type="submit" id="confirmButton" style="display: none;">Save</button>
-                    <button type="button" id="cancelButton" style="display: none;">Cancel</button>
-                </div>
-            </form>
+            <table>
+                <?php foreach ($details as $key => $value) : ?>
+                    <tr>
+                        <th><?php echo $key; ?></th>
+                        <td><?php echo $value; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+            <div class="form-buttons">
+                <button type="button" id="editButton">Edit</button>
+            </div>
         <?php else : ?>
             <p>No details found for this staff member.</p>
         <?php endif; ?>
@@ -98,7 +48,11 @@
         <a href="staffs.php" class="back-link">Back to Staff List</a>
     </section>
 
-    <script src="js/validate_form.js"></script>
+    <script>
+        document.getElementById('editButton').addEventListener('click', function() {
+            window.location.href = 'staff_edit.php?staff_ID=<?php echo $staff_ID; ?>';
+        });
+    </script>
 </body>
 
 </html>
