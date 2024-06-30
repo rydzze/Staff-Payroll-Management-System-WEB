@@ -25,3 +25,4 @@ document.getElementById('cancelButton').addEventListener('click', function() {
   document.getElementById('confirmButton').style.display = 'none';
   document.getElementById('cancelButton').style.display = 'none';
 });
+

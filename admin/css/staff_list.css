@@ -88,16 +88,3 @@ a:hover {
   color: #3498db;
   text-decoration: none;
 }
-
-button {
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-left: 5px;
-}
-
-button:hover {
-  background-color: #2980b9;
-}
