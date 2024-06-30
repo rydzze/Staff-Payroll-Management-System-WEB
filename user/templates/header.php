@@ -6,7 +6,7 @@
     </div>
     <div class="profiledropdown">
         <img src="img/user.jpg" class="profile" alt="profilepicture">
-        <span>Muhammad Ali</span>
+        <span style="margin: auto;">Muhammad Ali</span>
         <img src="img/dropdown.png" class="dropdown" alt="dropdown">
         <div class="dropdown-content">
             <a href="viewuser.php">View Profile</a>
