@@ -1,0 +1,27 @@
+body {
+    display: contents;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    position:static;
+    height: 100px;
+    width: 300px;
+    margin-top:200px;
+    margin-left: 800px;
+}
+
+.profile img {
+    height: 200px;
+    width: 220px;
+}
+
+.profile h1 {
+    text-align:end;
+
+.profile p {
+    font-size: small;
+    text-align: center;
+}
