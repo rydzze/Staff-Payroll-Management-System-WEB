@@ -1,9 +1,19 @@
 <div class="sidebar">
-    <h2>Main Menu</h2>
+    <h2>SPMS | Main Menu</h2>
 
-    <ul>
-        <li><a href="dashboard.php">Home</a></li>
-        <li><a href="staffs.php">Staff</a></li>
-        <li><a href="payrolls.php">Payroll</a></li>
+    <ul id="top">
+        <li><a href="dashboard.php">
+            <img src='img/home.png' alt='homeIcon'>Home</a>
+        </li>
+        <li><a href="staffs.php">
+            <img src='img/staff.png' alt='staffIcon'>Staff</a></li>
+        <li><a href="payrolls.php">
+            <img src='img/payroll.png' alt='payrollIcon'>Payroll</a>
+        </li>
+    </ul>
+
+    <ul id="bottom">
+        <li><a href="includes/session_end.php" onclick="return confirm('Are you sure you want to logout?');">
+            <img src='img/logout.png' alt='logoutIcon'>Logout</a></li>
     </ul>
 </div>

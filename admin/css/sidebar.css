@@ -1,13 +1,29 @@
 .sidebar {
+    font-family: 'Arial', sans-serif;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 250px;
-    background: #333;
+    background: #13245a;
     color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#top {
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#bottom {
+    margin-top: auto;
+    margin-bottom: 15%;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar h2 {
@@ -22,16 +38,24 @@
 
 .sidebar ul li {
     margin-bottom: 10px;
+    display: flex;
+    align-items: column;
 }
 
 .sidebar ul li a {
     color: #fff;
     text-decoration: none;
-    display: block; 
+    display: flex;
+    align-items: center;
     padding: 10px; 
     transition: background-color 0.3s ease; 
 }
 
 .sidebar ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1); 
+}
+
+img {
+    width: 15%;
+    margin-right: 25px;
 }

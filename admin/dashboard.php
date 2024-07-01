@@ -1,3 +1,6 @@
+<?php include 'includes/session_start.php'; ?>
+<?php $name = $_SESSION['admin_name']?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +18,7 @@
     <?php include 'includes/dashboard.php';?>
     
     <section class="content">
-        <h1>Welcome, Admin!</h1>
+        <h1>Welcome, <?php echo $name?>!</h1>
         <h2>Dashboard</h2>    
 
         <div class="dashboard-cards">
