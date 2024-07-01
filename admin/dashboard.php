@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | Dashboard</title>
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
@@ -12,14 +13,17 @@
 <body>
     <?php include 'templates/sidebar.php'; ?>
     <?php include 'includes/dashboard.php';?>
+    
     <section class="content">
         <h1>Welcome, Admin!</h1>
         <h2>Dashboard</h2>    
+
         <div class="dashboard-cards">
             <div class="card">
                 <h3>Total Active Staff</h3>
                 <p><?php echo $active_staff_count; ?></p>
             </div>
+            
             <div class="card">
                 <h3>Pending Payrolls This Month</h3>
                 <p><?php echo $pending_payrolls; ?></p>
