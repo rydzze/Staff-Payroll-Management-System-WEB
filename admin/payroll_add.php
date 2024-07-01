@@ -41,7 +41,7 @@
                     </td>
 
                     <td>
-                        <input type="date" id="payroll_date" name="payroll_date" required>
+                        <input type="date" id="payroll_date" name="payroll_date" value="<?php echo date('Y-m-d'); ?>" required>
                     </td>
                 </tr>
                 <tr><td class="row-gap"></td></tr>
