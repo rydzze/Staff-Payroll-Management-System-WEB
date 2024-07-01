@@ -1,26 +1,9 @@
 table {
-  width: 70%;
+  width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
   margin: 0 auto;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-th {
-  background-color: #f2f2f2;
-  text-align: left;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tr:hover {
-  background-color: #f1f1f1;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .form-buttons {
@@ -49,37 +32,78 @@ button:hover {
 
 .error-message {
   color: red;
-  font-size: 0.8em;
-  display: none;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
 }
 
-.error {
-  border-color: red;
+input.error {
+  border: 2px solid red;
 }
 
 #confirmButton {
   padding: 10px 20px;
-  background-color: #10c622;
+  background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
   margin-left: 5px;
   font-size: 16px;
+  border-radius: 4px;
 }
 
 #cancelButton {
   padding: 10px 20px;
-  background-color: #fd4508;
+  background-color: #00000075;
   color: white;
   border: none;
   cursor: pointer;
   margin-left: 5px;
+  border-radius: 4px;
 }
 
 #confirmButton:hover {
-  background-color: #009b05;
+  background-color: #45a049;
 }
 
 #cancelButton:hover {
-  background-color: #ff0000;
+  background-color: #00000095;
+}
+
+.gap {
+  padding: 25px 25px 25px 25px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input[readonly] {
+  background-color: #e9e9e9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
 }
