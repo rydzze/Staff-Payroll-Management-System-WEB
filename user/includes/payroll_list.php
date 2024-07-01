@@ -21,8 +21,8 @@ if ($result->num_rows > 0) {
         echo "<tr>
                 <td>{$row['payroll_ID']}</td>
                 <td>{$row['payroll_date']}</td>
-                <td></td>
-                <td><a href='printpayroll.php?payroll_ID={$row['payroll_ID']}'><img src='img/print.png'></a></td>
+                <td>Paid</td>
+                <td><a href='includes/printpayroll.php?payroll_ID={$row['payroll_ID']}'><img src='img/print.png'></a></td>
               </tr>";
     }
     echo "</table>";
@@ -31,6 +31,8 @@ if ($result->num_rows > 0) {
     $result_count = $conn->query($sql_count);
     $row_count = $result_count->fetch_assoc();
     $total_pages = ceil($row_count['total'] / $results_per_page);
+
+    echo "<hr style='width: 90%; margin-top: 25px;'>";
 
     echo "<div class='pagination'>";
     if ($current_page > 1) {
