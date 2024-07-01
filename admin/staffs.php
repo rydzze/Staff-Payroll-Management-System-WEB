@@ -17,17 +17,25 @@
         <h1>Staff List</h1>
 
         <div class="func-buttons">
+            <form id="filterForm" method="GET" action="staffs.php">
+                <select name="department" id="department" onchange="document.getElementById('filterForm').submit();">
+                    <option value="">All Departments</option>
+                    <option value="HR">HR</option>
+                    <option value="IT">IT</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Support">Support</option>
+                    <option value="Legal">Legal</option>
+                    <option value="Operations">Operations</option>
+                </select>
+            </form>
             <button class="button" id="addButton">Add New Staff</button>
         </div>
 
         <?php include 'includes/staff_list.php'; ?>
     </section>
 
-    <script>
-        document.getElementById('addButton').addEventListener('click', function() {
-            window.location.href = 'staff_add.php';
-        });
-    </script>
+    <script src="js/staff_list.js"></script>
 </body>
 
 </html>

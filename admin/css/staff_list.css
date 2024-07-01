@@ -129,3 +129,21 @@ a:hover {
 #fireButton:hover {
   background-color: #ff0000;
 }
+
+.func-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#filterForm {
+  margin-right: auto;
+}
+
+.func-buttons select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
