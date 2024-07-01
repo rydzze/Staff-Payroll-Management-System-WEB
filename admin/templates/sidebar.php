@@ -13,7 +13,7 @@
     </ul>
 
     <ul id="bottom">
-        <li><a href="includes/session_end.php" onclick="return confirm('Are you sure you want to logout?');">
+        <li><a href="includes/session_end.php">
             <img src='img/logout.png' alt='logoutIcon'>Logout</a></li>
     </ul>
 </div>

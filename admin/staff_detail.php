@@ -22,9 +22,9 @@
 
         <?php include 'includes/staff_detail.php'; ?>
 
-        <?php if (!empty($details)) : ?>
+        <?php if(!empty($details)): ?>
             <table>
-                <?php foreach ($details as $key => $value) : ?>
+                <?php foreach($details as $key => $value): ?>
                     <tr>
                         <th><?php echo $key; ?></th>
                         <td><?php echo $value; ?></td>
@@ -37,7 +37,7 @@
                 <button class="button" id="fireButton">Fire</button>
             </div>
         <?php else : ?>
-            <p>No details found for this staff member.</p>
+            <p>No record found for this staff.</p>
         <?php endif; ?>
     </section>
 
@@ -46,7 +46,7 @@
             window.location.href = 'staff_edit.php?staff_ID=<?php echo $staff_ID; ?>';
         });
         document.getElementById('fireButton').addEventListener('click', function() {
-            if (confirm('Are you sure you want to fire this staff member?')) {
+            if (confirm('Are you sure you want to fire this staff?')) {
                 window.location.href = 'includes/staff_fire.php?staff_ID=<?php echo $staff_ID; ?>';
             }
         });

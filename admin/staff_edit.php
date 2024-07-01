@@ -16,10 +16,11 @@
 <body>
     <?php include 'templates/sidebar.php'; ?>
     <?php include 'includes/staff_edit.php'; ?>
+
     <section class="content">
         <h1>Edit Staff Details</h1>
 
-        <?php if (!empty($details)) : ?>
+        <?php if(!empty($details)): ?>
             <form id="staffEditForm" method="post" action="staff_edit.php?staff_ID=<?php echo $staff_ID; ?>">
                 <table>
                     <tr>
@@ -37,6 +38,7 @@
                             <input type="text" id="ic" name="ic" value="<?php echo $details['IC']; ?>" readonly>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
                             <label for="first_name">First Name:</label>
@@ -54,6 +56,7 @@
                             <span class="error-message" id="last_name-error"></span>
                         </td>
                     </tr>
+                    
                     <tr>
                         <td>
                             <label for="age">Age:</label>
@@ -69,6 +72,7 @@
                             <input type="text" id="birthdate" name="birthdate" value="<?php echo $details['Birthdate']; ?>" readonly>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
                             <label for="email">Email:</label>
@@ -86,6 +90,7 @@
                             <span class="error-message" id="phone_number-error"></span>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
                             <label for="address">Address:</label>
@@ -96,13 +101,14 @@
                         </td>
                     </tr>
                 </table>
+
                 <table>
                     <tr>
                         <td>
                             <label for="department">Department:</label>
                         </td>
                         <td>
-                        <select id="department" name="department" data-position="<?php echo $details['Position']; ?>" onchange="updatePositions()" required>
+                            <select id="department" name="department" data-position="<?php echo $details['Position']; ?>" onchange="updatePositions()" required>
                                 <option value="">Select Department</option>
                                 <option value="HR" <?php echo $details['Department'] == 'HR' ? 'selected' : ''; ?>>Human Resources</option>
                                 <option value="IT" <?php echo $details['Department'] == 'IT' ? 'selected' : ''; ?>>Information Technology</option>
@@ -123,6 +129,7 @@
                             <span class="error-message" id="basic_salary-error"></span>
                         </td>
                     </tr>
+
                     <tr>
                         <td>
                             <label for="position">Position:</label>
@@ -130,7 +137,6 @@
                         <td>
                             <select id="position" name="position" required>
                                 <option value="">Select Position</option>
-                                <!-- Populate positions based on the selected department -->
                             </select>
                             <span class="error-message" id="position-error"></span>
                         </td>
@@ -142,6 +148,7 @@
                             <input type="text" id="hire_date" name="hire_date" value="<?php echo $details['Hire Date']; ?>" readonly>
                         </td>
                     </tr>
+                    
                     <tr>
                         <td>
                             <label for="status">Status:</label>
@@ -151,15 +158,17 @@
                         </td>
                     </tr>
                 </table>
+
                 <div class="form-buttons">
                     <input type="submit" id="confirmButton" value="Save">
                     <input type="button" id="cancelButton" value="Cancel" onclick="window.location.href='staff_detail.php?staff_ID=<?php echo $details['Staff ID']; ?>';">
                 </div>
             </form>
         <?php else : ?>
-            <p>No details found for this staff member.</p>
+            <p>No record found for this staff.</p>
         <?php endif; ?>
     </section>
+
     <script src="js/staff_edit_validate_form.js"></script>
 </body>
 

@@ -31,6 +31,7 @@
                     <option value="Operations">Operations</option>
                 </select>
             </form>
+            
             <button class="button" id="addButton">Add New Staff</button>
         </div>
 

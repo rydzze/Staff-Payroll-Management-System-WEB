@@ -23,19 +23,20 @@
 
         <div class="dashboard-cards">
             <div class="card">
-                <h3>Total Active Staff</h3>
-                <p><?php echo $active_staff_count; ?></p>
+                <h3>Total Staff</h3>
+                <p><?php echo $total_staff; ?></p>
             </div>
             
             <div class="card">
-                <h3>Pending Payrolls This Month</h3>
-                <p><?php echo $pending_payrolls; ?></p>
+                <h3>Pending Payrolls for this Month</h3>
+                <p><?php echo $total_pending_payroll; ?></p>
             </div>
         </div>
 
         <div class="dashboard-tables">
             <div class="table-container">
                 <h3>Total Staff by Department</h3>
+
                 <table>
                     <thead>
                         <tr>
@@ -44,15 +45,16 @@
                             <th>Number of Staff</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         <?php
                         $i = 1;
-                        while ($row = $staff_by_dept_result->fetch_assoc()) {
+                        while($row = $staff_by_dept->fetch_assoc()){
                             echo "<tr>
-                                <td>{$i}</td>
-                                <td>{$row['staff_department']}</td>
-                                <td>{$row['num_staff']}</td>
-                            </tr>";
+                                    <td>{$i}</td>
+                                    <td>{$row['staff_department']}</td>
+                                    <td>{$row['num_staff']}</td>
+                                  </tr>";
                             $i++;
                         }
                         ?>
@@ -62,6 +64,7 @@
 
             <div class="table-container">
                 <h3>Recent Payroll Records</h3>
+
                 <table>
                     <thead>
                         <tr>
@@ -71,16 +74,17 @@
                             <th>Date</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         <?php
                         $i = 1;
-                        while ($row = $recent_payrolls_result->fetch_assoc()) {
+                        while($row = $recent_payroll->fetch_assoc()){
                             echo "<tr>
-                                <td>{$i}</td>
-                                <td>{$row['payroll_ID']}</td>
-                                <td>{$row['staff_ID']}</td>
-                                <td>{$row['payroll_date']}</td>
-                            </tr>";
+                                    <td>{$i}</td>
+                                    <td>{$row['payroll_ID']}</td>
+                                    <td>{$row['staff_ID']}</td>
+                                    <td>{$row['payroll_date']}</td>
+                                  </tr>";
                             $i++;
                         }
                         ?>

@@ -23,6 +23,7 @@
                         <td><label for="uname">Username:</label></td>
                         <td><input class="input" type="text" placeholder="Your username here" name="admin_ID" required></td>
                     </tr>
+                    
                     <tr class="passw">
                         <td><label for="psw">Password:</label></td>
                         <td><input class="input" type="password" placeholder="Your password here" name="admin_pwd" required></td>

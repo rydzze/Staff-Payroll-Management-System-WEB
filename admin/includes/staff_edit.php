@@ -1,14 +1,13 @@
 <?php
 include 'db.php';
 
-// Enable error reporting for debugging
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $staff_ID = $_GET['staff_ID'];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $person_IC = $_POST['ic'];
     $person_fname = $_POST['first_name'];
     $person_lname = $_POST['last_name'];
@@ -23,32 +22,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $staff_status = $_POST['status'];
     $staff_hireddate = $_POST['hire_date'];
 
-    // Debug output
     echo "<pre>";
     print_r($_POST);
     echo "</pre>";
 
-    $update_person_sql = "UPDATE person 
-                          SET person_IC=?, person_fname=?, person_lname=?, person_age=?, person_birthdate=?, person_email=?, person_phonenum=?, person_homeaddr=? 
-                          WHERE staff_ID=?";
-    $stmt = $conn->prepare($update_person_sql);
-    if ($stmt === false) {
+    $sql_query = "UPDATE person 
+                  SET person_IC=?, person_fname=?, person_lname=?, person_age=?, person_birthdate=?, person_email=?, person_phonenum=?, person_homeaddr=? 
+                  WHERE staff_ID=?";
+    $stmt = $conn->prepare($sql_query);
+
+    if($stmt === false){
         die("Error preparing statement: " . $conn->error);
     }
+
     $stmt->bind_param("sssissssi", $person_IC, $person_fname, $person_lname, $person_age, $person_birthdate, $person_email, $person_phonenum, $person_homeaddr, $staff_ID);
-    if (!$stmt->execute()) {
+    if(!$stmt->execute()){
         die("Error executing statement: " . $stmt->error);
     }
 
-    $update_staff_sql = "UPDATE staff 
-                         SET staff_department=?, staff_position=?, staff_basicsalary=? 
-                         WHERE staff_ID=?";
-    $stmt = $conn->prepare($update_staff_sql);
-    if ($stmt === false) {
+    $sql_query = "UPDATE staff 
+                  SET staff_department=?, staff_position=?, staff_basicsalary=? 
+                  WHERE staff_ID=?";
+    $stmt = $conn->prepare($sql_query);
+    
+    if($stmt === false){
         die("Error preparing statement: " . $conn->error);
     }
+    
     $stmt->bind_param("ssdi", $staff_department, $staff_position, $staff_basicsalary, $staff_ID);
-    if (!$stmt->execute()) {
+    if(!$stmt->execute()){
         die("Error executing statement: " . $stmt->error);
     }
 
@@ -56,16 +58,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
 }
 
-$sql = "SELECT p.person_IC, p.person_fname, p.person_lname, p.person_age, p.person_birthdate, p.person_email, p.person_phonenum, p.person_homeaddr, s.staff_department, s.staff_position, s.staff_basicsalary, s.staff_hireddate, s.staff_status
-        FROM person p
-        INNER JOIN staff s ON p.staff_ID = s.staff_ID
-        WHERE p.staff_ID = ?";
-$stmt = $conn->prepare($sql);
+$sql_query = "SELECT p.person_IC, p.person_fname, p.person_lname, p.person_age, p.person_birthdate, p.person_email, p.person_phonenum, p.person_homeaddr, s.staff_department, s.staff_position, s.staff_basicsalary, s.staff_hireddate, s.staff_status
+              FROM person p
+              INNER JOIN staff s ON p.staff_ID = s.staff_ID
+              WHERE p.staff_ID = ?";
+$stmt = $conn->prepare($sql_query);
 $stmt->bind_param("i", $staff_ID);
 $stmt->execute();
 $result = $stmt->get_result();
-if ($result->num_rows > 0) {
+
+$details = [];
+
+if($result->num_rows > 0){
     $row = $result->fetch_assoc();
+    
     $details = [
         'Staff ID' => $staff_ID,
         'IC' => $row['person_IC'],
@@ -82,7 +88,5 @@ if ($result->num_rows > 0) {
         'Hire Date' => $row['staff_hireddate'],
         'Status' => $row['staff_status']
     ];
-} else {
-    $details = [];
 }
 ?>

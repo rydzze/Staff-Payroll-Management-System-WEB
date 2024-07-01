@@ -22,9 +22,9 @@
 
         <?php include 'includes/payroll_detail.php'; ?>
         
-        <?php if (!empty($detail1)) : ?>
+        <?php if(!empty($detail1)): ?>
             <table>
-                <?php foreach ($detail1 as $key => $value) : ?>
+                <?php foreach($detail1 as $key => $value): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($key); ?></td>
                         <td><?php echo htmlspecialchars($value); ?></td>
@@ -32,12 +32,12 @@
                 <?php endforeach; ?>
             </table>
         <?php else : ?>
-            <p>No basic information found for the specified payroll ID.</p>
+            <p>No record found for the payroll.</p>
         <?php endif; ?>
 
-        <?php if (!empty($detail2)) : ?>
+        <?php if(!empty($detail2) && !empty($detail3)): ?>
             <table>
-                <?php foreach ($detail2 as $key => $value) : ?>
+                <?php foreach($detail2 as $key => $value): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($key); ?></td>
                         <td><?php echo htmlspecialchars($value); ?></td>
@@ -46,13 +46,14 @@
             </table>
             
             <table>
-                <?php foreach ($detail3 as $key => $value) : ?>
+                <?php foreach($detail3 as $key => $value): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($key); ?></td>
                         <td><?php echo htmlspecialchars($value); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
+
             <table>
                 <tr>
                     <td>Net Salary</td>
@@ -60,7 +61,7 @@
                 </tr>
             </table>
         <?php else : ?>
-            <p>No detailed information found for the specified payroll ID.</p>
+            <p>No record found for the payroll.</p>
         <?php endif; ?>
     </section>
 </body>

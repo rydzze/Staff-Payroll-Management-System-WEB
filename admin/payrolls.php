@@ -19,7 +19,6 @@
         <h1>Payroll List</h1>
 
         <div class="func-buttons">
-            
             <button class="button" id="addButton">Add Payroll</button>
         </div>
 
