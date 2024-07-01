@@ -1,8 +1,8 @@
   body {
-    display: contents;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 .main {
@@ -12,20 +12,86 @@
 
 
 .bulletin {
-    margin-top:150px;
-    margin-left:590px;
-    height: 100px;
-    display:flex;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    background-color: #b31717;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 
 .bulletin-board {
-    background-color: rgb(192, 115, 115);
-    border: 2px solid #100d0d;
-    height:350px;
-    width:600px;
-    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.slides {
+    display: none;
+    text-align: center;
+}
+
+.slides img {
+    height:50px;
+    width: 50px;
     border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #8a6363;
+}
+
+p {
+    margin: 10px 0;
 }
 
 .announce {
@@ -35,7 +101,7 @@
 }
 
 .announcement {
-    background-color: #412525;
+    background-color: #7f5858;
     padding: 20px;
     border-radius: 5px;
     width: 1050px; /* added this to make it full width */

@@ -18,18 +18,34 @@
 
     <section class="bulletin"> 
         <div class="bulletin-board">
-            <h2>Bulletin Board</h2>
-            
-            <p>Announcement goes here...</p>
-        </div><br>
+
+          <div class="slides">
+            <img src="img/slideshow1.jpeg">
+          </div>
+
+          <div class="slides">
+            <img src="img/slideshow2.jpeg">
+          </div>
+
+          <div class="slides">
+            <img src="img/slideshow3.jpeg">
+          </div>
+        </div>
+        <br>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </section>
+
+<script src="js/slideshow.js"></script>
 
     <section class="announce">
         <div class="announcement">
-            <h3>Announcement</h3>
-            <p>Bla bla bla</p>
+            <h3>Introducing Our New Staff Payroll Management System!</h3>
+            <p>We are excited to announce the launch of our new Staff Payroll Management System, 
+              designed to improve the accuracy, efficiency, and security of our payroll processes.</p>
         </div>
     </section>
+
 </body>
 
 </html>
