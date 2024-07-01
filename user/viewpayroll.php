@@ -18,10 +18,14 @@
 
     <section class="content"> 
         <h1>View Payroll</h1>
+
         <div class="payrolllist">
             <h2>Payroll Records</h2>
+            
             <?php include 'includes/payroll_list.php';?>
         </div>
+        
+        <div id="padding"></div>
     </section>
 </body>
 
