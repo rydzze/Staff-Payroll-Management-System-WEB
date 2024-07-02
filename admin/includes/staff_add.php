@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                           VALUES ('$usr_ID', '$staff_ID', '$usr_pwd')";
 
             if($conn->query($sql_query) === TRUE){
-                echo "<script>alert('Successfully added new staff!\\nusr_ID: $usr_ID\\nstaff_ID: $staff_ID\\nusr_pwd: $usr_pwd'); window.location.href='staff_detail.php?staff_ID=$staff_ID';</script>";
+                echo "<script>alert('Successfully added new staff!\\nusr_ID: $usr_ID\\nstaff_ID: $staff_ID\\nusr_pwd: $usr_pwd'); window.location.href='../staff_detail.php?staff_ID=$staff_ID';</script>";
                 exit();
             }
             else{
