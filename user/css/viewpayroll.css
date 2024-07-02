@@ -1,6 +1,5 @@
 body {
-    display: contents;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F5F5F5;
@@ -12,6 +11,9 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding-bottom: 5px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .content h1{
@@ -20,14 +22,11 @@ body {
     color: #4A85F6;
 }
 
-.content h2{
-    padding: 2% 0% 0% 2%;
-}
-
 .pagination {
     margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
+    flex-basis: 100%
 }
 
 .pagination a {
@@ -71,7 +70,7 @@ body {
 
 table img{
     width: 30%;
-    opacity: 80%;
+    opacity: 75%;
 }
 
 th{
@@ -92,6 +91,44 @@ tr{
     text-align: center;
 }
 
+table{
+    width: 100%;
+}
+
 #padding {
     height: 10px;
+}
+
+.payrolllist h2 {
+    padding: 2% 0% 0% 2%;
+    flex-basis: 50%;
+    flex-grow: 1;
+    width: fit-content;
+}
+
+#filterForm {
+    margin-top: 3%;
+    margin-right: 3%;
+    margin-bottom: 2%;
+    border-radius: 16px;
+    font-size: 17px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+select {
+    outline: none;
+    font-size: 17px;
+    border: 0px;
+    height: 40px;
+    width: 140px;
+    padding: 2% 2% 2% 2%;
+}
+
+hr{
+    width: 100%;
+    margin-top: 25px;
+    padding: 0%;
+    height: 0%;
+    flex-basis: 90%;
 }

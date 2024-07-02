@@ -9,9 +9,9 @@ html {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - 300px);
-    height: 100%;
+    width: calc(100% - 255px);
     background: #fff;
     padding: 14px 50px;
     box-sizing: border-box;
+    background-color: #f7f7f7;
 }

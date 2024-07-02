@@ -7,6 +7,7 @@
     color: black;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 .sidebar ul {
@@ -31,13 +32,10 @@
     display: flex;
     align-items: center;
     padding: 25px; 
-    transition: background-color 0.3s ease; 
-}
- 
-a {
     font-size: 22px;
+    transition: background-color 0.3s ease; 
 }
 
 .sidebar ul li a:hover {
-    color: #4A85F6(255, 255, 255, 0.1); 
+    color: #4A85F6; 
 }

@@ -17,11 +17,10 @@
     <?php include 'templates/sidebar.php';?>
 
     <section class="content"> 
-        <h1>View Payroll</h1>
+            <h1>View Payroll</h1>
 
         <div class="payrolllist">
             <h2>Payroll Records</h2>
-            
             <?php include 'includes/payroll_list.php';?>
         </div>
         
