@@ -31,10 +31,13 @@
             customer service, innovative features, and commitment to excellence. We aim to make payroll processing a breeze, 
             allowing our clients to save time, reduce errors, and increase productivity.</p><br>
         <h2>Our Values</h2>
-        <p>Accuracy: We understand the importance of accurate payroll processing and strive to deliver error-free results every time.
-           Efficiency: Our system is designed to simplify payroll processing, reducing the time and effort required to manage your payroll.
-           Security: We take the security of your data seriously, implementing robust measures to protect your sensitive information.
-           Innovation: We continuously update and improve our system to ensure you have access to the latest features and technologies.
+        <p>
+        <ul>
+        <li><strong>Accuracy:</strong> We understand the importance of accurate payroll processing and strive to deliver error-free results every time.</li>
+        <li><strong>Efficiency:</strong> Our system is designed to simplify payroll processing, reducing the time and effort required to manage your payroll.</li>
+        <li><strong>Security:</strong> We take the security of your data seriously, implementing robust measures to protect your sensitive information.</li>
+        <li><strong>Innovation:</strong> We continuously update and improve our system to ensure you have access to the latest features and technologies.</li>
+        </ul>
         </p><br>
         <h2>Our Team</h2>
         <p>Our team of experts has years of experience in payroll management, software development, and customer support.
