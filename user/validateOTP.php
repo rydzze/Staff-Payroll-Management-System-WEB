@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPMS | Forgot Password</title>
+    <title>SPMS | OTP Verification</title>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/login.css">
@@ -14,16 +14,17 @@
     <div class="bg-image"></div>
 
     <section class="login">
-        <h1>Forgot Password</h1>
-        <form action="includes/forgotpassword.php" method="post">
-            <div class="container">
+        <h1>OTP Verification</h1>
+
+        <form action="includes/validateOTP.php" method="post">
+            <div class="container" id="otpForm">
                 <table>
                     <tr class="uname">
-                        <td><label for="uname">Username:</label></td>
-                        <td><input class="input" type="text" placeholder="Your username here" name="usr_ID" required></td>
+                        <td><label for="otp">OTP:</label></td>
+                        <td><input class="input" type="text" id="userOTP" placeholder="6 digits OTP code" name="otpinput" required></td>
                     </tr>
                 </table>
-                <input type="submit" id="submitButtonForgot" name="login" value="Send Link">
+                <input type="submit" id="submitButtonVerify" name="login" value="Verify">
             </div>
         </form>
     </section>

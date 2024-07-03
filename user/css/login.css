@@ -82,3 +82,31 @@ table{
     border: none;
 }
 
+.login #submitButtonForgot{
+    margin-top: 5%;
+    margin-bottom: 28px;
+    margin-left: 68.5%;
+    background-color: #4A85F6;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 14px;
+    height: 40px;
+    border: none;
+}
+
+.login #submitButtonVerify{
+    margin-top: 5%;
+    margin-bottom: 28px;
+    margin-left: 75%;
+    background-color: #4A85F6;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 14px;
+    height: 40px;
+    border: none;
+}
+

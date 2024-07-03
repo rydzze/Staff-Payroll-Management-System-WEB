@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+include 'db.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -6,19 +10,32 @@ require '../PHPMailer/src/Exception.php';
 require '../PHPMailer/src/PHPMailer.php';
 require '../PHPMailer/src/SMTP.php';
 
-$_POST['email'] = "___@gmail.com";
+$usr_ID = $_POST['usr_ID'];
 
-if (isset($_POST['email'])) {
+$sql ="SELECT p.person_email, p.person_fname, p.person_lname
+       FROM person p
+       INNER JOIN usr u ON p.staff_ID = u.staff_ID
+       WHERE usr_ID ='$usr_ID'";
+$result = $conn->query($sql);
+$data = $result->fetch_assoc();
 
-    $email = $_POST['email']; 
-    $token = bin2hex(random_bytes(16));
+$email = $data['person_email'];
+$name = $data["person_fname"]." ".$data["person_lname"];
+
+$conn->close();
+
+if (isset($email)) {
+    $otp = random_int(100000, 999999);
     $mail = new PHPMailer(true);
+    
+    $_SESSION['otp'] = $otp;
+    $_SESSION['usr_ID'] = $usr_ID;
 
     try {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = '___@gmail.com';
+        $mail->Username = 'REDACTED@gmail.com';
         $mail->Password = 'REDACTED';
         $mail->Port = 587;
 
@@ -27,12 +44,24 @@ if (isset($_POST['email'])) {
 
         $mail->isHTML(true);
         $mail->Subject = 'Password Reset Request';
-        $mail->Body = 'Click the link below to reset your password:<br><a href="http://localhost/twt/user/resetpassword.php?token=' . $token . '">Reset Password</a>';
+        $mail->Body = 'Dear '.$name.'<br><br>To complete <b>SPMS reset password process</b>, please use <b>6</b> digits OTP code provided as below.<br><br><b>'.$otp.'</b>';
 
         $mail->send();
-        echo 'An email has been sent with instructions to reset your password.';
+        echo "<script>
+                window.location = '../validateOTP.php'; 
+                alert('An email has been sent with instructions to reset your password.');
+              </script>";
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    }
+        echo "<script>
+                  window.location = '../forgotpassword.php'; 
+                alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}. Please contact the admins.');
+              </script>";
+    }  
+}
+else{
+  echo "<script>
+          alert('User ID does not exist in system. Redirecting ...');
+          window.location = '../forgotpassword.php'; 
+        </script>";
 }
 ?>
