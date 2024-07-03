@@ -8,20 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | Edit Staff Details</title>
 
+    <link rel="icon" href="img/spms.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/staff_edit.css">
+    <link rel="stylesheet" href="css/form.css">
     <script src="js/staff_edit.js"></script>
 </head>
 
 <body>
     <?php include 'templates/sidebar.php'; ?>
-    <?php include 'includes/staff_edit.php'; ?>
+    <?php include 'includes/fetch_staff_edit.php'; ?>
 
     <section class="content">
         <h1>Edit Staff Details</h1>
 
         <?php if(!empty($details)): ?>
-            <form id="staffEditForm" method="post" action="staff_edit.php?staff_ID=<?php echo $staff_ID; ?>">
+            <form id="staff-form" method="post" action="includes/staff_edit.php?staff_ID=<?php echo $staff_ID; ?>">
                 <table>
                     <tr>
                         <td>
@@ -30,7 +31,7 @@
                         <td>
                             <input type="text" id="staff_id" name="staff_id" value="<?php echo $details['Staff ID']; ?>" readonly>
                         </td>
-                        <td class="gap"></td>
+                        <td class="column-gap"></td> 
                         <td>
                             <label for="ic">IC:</label>
                         </td>
@@ -47,7 +48,7 @@
                             <input type="text" id="first_name" name="first_name" value="<?php echo $details['First Name']; ?>" required>
                             <span class="error-message" id="first_name-error"></span>
                         </td>
-                        <td class="gap"></td>
+                        <td class="column-gap"></td> 
                         <td>
                             <label for="last_name">Last Name:</label>
                         </td>
@@ -64,7 +65,7 @@
                         <td>
                             <input type="text" id="age" name="age" value="<?php echo $details['Age']; ?>" readonly>
                         </td>
-                        <td class="gap"></td>
+                        <td class="column-gap"></td> 
                         <td>
                             <label for="birthdate">Birth Date:</label>
                         </td>
@@ -81,7 +82,7 @@
                             <input type="email" id="email" name="email" value="<?php echo $details['Email']; ?>" required>
                             <span class="error-message" id="email-error"></span>
                         </td>
-                        <td class="gap"></td>
+                        <td class="column-gap"></td> 
                         <td>
                             <label for="phone_number">Phone Number:</label>
                         </td>
@@ -120,7 +121,7 @@
                             </select>
                             <span class="error-message" id="department-error"></span>
                         </td>
-                        <td class="gap"></td>
+                        <td class="column-gap"></td> 
                         <td>
                             <label for="basic_salary">Basic Salary:</label>
                         </td>
@@ -140,7 +141,7 @@
                             </select>
                             <span class="error-message" id="position-error"></span>
                         </td>
-                        <td class="gap"></td>
+                        <td class="column-gap"></td> 
                         <td>
                             <label for="hire_date">Hire Date:</label>
                         </td>
@@ -149,19 +150,11 @@
                         </td>
                     </tr>
                     
-                    <tr>
-                        <td>
-                            <label for="status">Status:</label>
-                        </td>
-                        <td>
-                            <input type="text" id="status" name="status" value="<?php echo $details['Status']; ?>" readonly>
-                        </td>
-                    </tr>
                 </table>
 
                 <div class="form-buttons">
-                    <input type="submit" id="confirmButton" value="Save">
-                    <input type="button" id="cancelButton" value="Cancel" onclick="window.location.href='staff_detail.php?staff_ID=<?php echo $details['Staff ID']; ?>';">
+                    <input type="submit" class="button" id="confirmButton" value="Save">
+                    <input type="button" class="button" id="cancelButton" value="Cancel" onclick="window.location.href='staff_detail.php?staff_ID=<?php echo $details['Staff ID']; ?>';">
                 </div>
             </form>
         <?php else : ?>

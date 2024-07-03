@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | Staff Details</title>
 
+    <link rel="icon" href="img/spms.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/staff_list.css">
+    <link rel="stylesheet" href="css/detail.css">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
     <section class="content">
         <h1>Staff Details</h1>
 
-        <a href="staffs.php" class="back-link">Back to Staff List</a>
+        <a href="staffs.php">Back to Staff List</a>
 
         <?php include 'includes/staff_detail.php'; ?>
 

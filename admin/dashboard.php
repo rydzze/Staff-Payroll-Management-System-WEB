@@ -1,5 +1,5 @@
 <?php include 'includes/session_start.php'; ?>
-<?php $name = $_SESSION['admin_name']?>
+<?php $name = $_SESSION['admin_name'] ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | Dashboard</title>
 
+    <link rel="icon" href="img/spms.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
@@ -19,6 +20,7 @@
     
     <section class="content">
         <h1>Welcome, <?php echo $name?>!</h1>
+        
         <h2>Dashboard</h2>    
 
         <div class="dashboard-cards">

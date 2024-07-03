@@ -1,29 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    function autofillBasicSalary(ID) {
-        if (ID !== '') {
+document.addEventListener('DOMContentLoaded', function(){
+    
+    function autofillBasicSalary(ID){
+        if(ID !== ''){
             fetch(`includes/fetch_basicsalary.php?staff_ID=${ID}`)
                 .then(response => response.text())
                 .then(data => {
                     const basicSalary = parseFloat(data);
-                    if (!isNaN(basicSalary)) {
+                    if(!isNaN(basicSalary)){
                         document.getElementById('payroll_basicsalary').value = basicSalary.toFixed(2);
-                    } else {
+                    }
+                    else{
                         document.getElementById('payroll_basicsalary').value = '';
                     }
                     calculateTotalSalary();
                 })
                 .catch(error => console.error('Error fetching basic salary:', error));
-        } else {
+        }
+        else{
             document.getElementById('payroll_basicsalary').value = '';
         }
     }
 
-    document.getElementById('staff_ID').addEventListener('change', function() {
+    document.getElementById('staff_ID').addEventListener('change', function(){
         const selectedStaffID = this.value;
         autofillBasicSalary(selectedStaffID);
     });
 
-    function calculateTotalSalary() {
+    function calculateTotalSalary(){
         const basicSalary = parseFloat(document.getElementById('payroll_basicsalary').value) || 0;
         const allowancePay = parseFloat(document.getElementById('payroll_allowancepay').value) || 0;
         const overtimePay = parseFloat(document.getElementById('payroll_overtimepay').value) || 0;
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('payroll_allowancepay').addEventListener('input', calculateTotalSalary);
     document.getElementById('payroll_overtimepay').addEventListener('input', calculateTotalSalary);
 
-    function calculateTotalDeduction() {
+    function calculateTotalDeduction(){
         const epf = parseFloat(document.getElementById('payroll_epf').value) || 0;
         const socso = parseFloat(document.getElementById('payroll_socso').value) || 0;
 
@@ -51,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('payroll_epf').addEventListener('input', calculateTotalDeduction);
     document.getElementById('payroll_socso').addEventListener('input', calculateTotalDeduction);
 
-    function calculateNetSalary() {
+    function calculateNetSalary(){
         const totalSalary = parseFloat(document.getElementById('total_salary').value) || 0;
         const totalDeduction = parseFloat(document.getElementById('total_deduction').value) || 0;
 
