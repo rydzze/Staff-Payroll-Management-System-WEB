@@ -1,0 +1,38 @@
+.button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#addButton {
+    background-color: #10c622;
+}
+#addButton:hover {
+    background-color: #009b05;
+}
+
+#editButton {
+    background-color: #3498db;
+}
+#editButton:hover {
+    background-color: #338eca;
+}
+
+#fireButton {
+    background-color: #fd4508;
+}
+#fireButton:hover {
+    background-color: #ff0000;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+}

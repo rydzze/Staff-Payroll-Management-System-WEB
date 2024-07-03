@@ -9,7 +9,7 @@
     <title>SPMS | Payroll List</title>
 
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/payroll_list.css">
+    <link rel="stylesheet" href="css/list.css">
 </head>
 
 <body>
@@ -19,6 +19,7 @@
         <h1>Payroll List</h1>
 
         <div class="func-buttons">
+            <br>
             <button class="button" id="addButton">Add Payroll</button>
         </div>
 

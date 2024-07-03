@@ -9,7 +9,7 @@
     <title>SPMS | Staff List</title>
 
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/staff_list.css">
+    <link rel="stylesheet" href="css/list.css">
 </head>
 
 <body>

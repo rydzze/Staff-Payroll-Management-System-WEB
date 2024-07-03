@@ -1,6 +1,16 @@
-.header {
+h1 {
+    margin-top: 3%;
+    margin-bottom: 5%;
     text-align: center;
     color: #333;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 label {
@@ -20,22 +30,6 @@ input[type="date"] {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
-}
-
-.form-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.button {
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]{
@@ -72,14 +66,17 @@ input.error {
     border: 2px solid red;
 }
 
-table {
-    width: 70%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+.row-gap {
+    padding-bottom: 50px;
 }
 
-.gap {
+.column-gap {
     padding: 0px 25px 0px 25px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }

@@ -9,7 +9,7 @@
     <title>SPMS | Add Payroll</title>
 
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/payroll_add.css">
+    <link rel="stylesheet" href="css/form.css">
     <script src="js/payroll_add.js"></script>
 </head>
 
@@ -19,9 +19,7 @@
     <section class="content">
         <h1>Add Payroll</h1>
 
-        <a href="payrolls.php">Back to Payroll List</a>
-
-        <form id="payroll-form" method="post" action="includes/payroll_add.php">
+        <form id="payroll-form" method="post" action="includes/payroll_add.php" onsubmit="return confirmSubmit();">
             <table>
                 <tr>
                     <td>
@@ -130,6 +128,11 @@
     </section>
 
     <script src="js/payroll_add_validate_form.js"></script>
+    <script>
+        function confirmSubmit(){
+            return window.confirm("Are you sure you want to add this payroll?\nYou cannot edit the detail once submitted.");
+        }
+    </script>
 </body>
 
 </html>

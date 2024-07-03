@@ -9,7 +9,7 @@
     <title>SPMS | Payroll Detail</title>
 
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/payroll_detail.css">
+    <link rel="stylesheet" href="css/detail.css">
 </head>
 
 <body>

@@ -9,7 +9,7 @@
     <title>SPMS | Add New Staff</title>
 
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/staff_add.css">
+    <link rel="stylesheet" href="css/form.css">
     <script src="js/staff_add.js"></script>
 </head>
 
@@ -17,7 +17,7 @@
     <?php include 'templates/sidebar.php'; ?>
 
     <section class="content">
-        <h1 class="header">Add New Staff</h1>
+        <h1>Add Staff</h1>
 
         <form id="staff-form" method="post" action="includes/staff_add.php">
             <table>
@@ -39,7 +39,7 @@
                         <input type="text" id="first_name" name="first_name" required>
                         <span class="error-message" id="first_name-error"></span>
                     </td>
-                    <td class="gap"></td>
+                    <td class="column-gap"></td>
                     <td>
                         <label for="last_name">Last Name:</label>
                     </td>
@@ -57,7 +57,7 @@
                     <td>
                         <input type="text" id="age" name="age" readonly>
                     </td>
-                    <td class="gap"></td>
+                    <td class="column-gap"></td>
                     <td>
                         <label for="birthdate">Birth Date:</label>
                     </td>
@@ -75,7 +75,7 @@
                         <input type="email" id="email" name="email" required>
                         <span class="error-message" id="email-error"></span>
                     </td>
-                    <td class="gap"></td>
+                    <td class="column-gap"></td>
                     <td>
                         <label for="phone_number">Phone Number:</label>
                     </td>
@@ -115,7 +115,7 @@
                         </select>
                         <span class="error-message" id="department-error"></span>
                     </td>
-                    <td class="gap"></td>    
+                    <td class="column-gap"></td>    
                     <td>
                         <label for="basic_salary">Basic Salary:</label>
                     </td>
