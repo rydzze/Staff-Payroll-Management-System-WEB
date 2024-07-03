@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function (){
       const day = parseInt(ic.substring(4, 6), 10);
 
       const current_year = new Date().getFullYear().toString().slice(-2);
-      const birthYear = year <= current_year ? `20${year.toString().padStart(2, '0')}` : `19${year.toString().padStart(2, '0')}`;
+      const birth_year = year <= current_year ? `20${year.toString().padStart(2, '0')}` : `19${year.toString().padStart(2, '0')}`;
 
       if(month < 1 || month > 12){
         icInput.classList.add('error');
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function (){
         return false;
       }
       else{
-        const daysInMonth = new Date(birthYear, month, 0).getDate();
+        const daysInMonth = new Date(birth_year, month, 0).getDate();
         if(day < 1 || day > daysInMonth){
           icInput.classList.add('error');
           icErrorElement.textContent = `Invalid IC. Day must be between 01 and ${daysInMonth} for the given month.`;
