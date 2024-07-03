@@ -7,22 +7,124 @@ body {
 
 .content{
     position:static;
-    height: 100px;
-    margin-top:-8px;
+    height: 1000px;
+    margin-top:120px;
     margin-left: 300px;
+    background-color: rgb(171, 165, 165);
 }
 
 .content h2 {
     text-align: center;
     font-size:x-large;
     font-weight: 750;
-    text-decoration: underline;
+    margin-top: 50px;
 }
 
 .content p {
     text-align: center;
+    opacity: 0;
+}
+
+.about {
+    text-align: center;
+    opacity: 0;
 }
 
 .content h3{
     text-align:center;
 }
+
+.content ul {
+    opacity: 0;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    height: 200px;
+    width: 30%;
+    margin: 20px;
+    margin-left: 150px;
+    float: left;
+    background-color: white;
+    border-radius: 20px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10; 
+    transform: translate(11%, 10%) scale(1.3);        
+  }
+
+  .cards:hover h2 {
+    opacity: 0;
+    top: 50px;
+  }
+
+  .cards:hover .card:not(:hover) h2 {
+    filter: blur(5px); 
+    opacity: 1;
+  }
+
+  .cards:hover p {
+    opacity: 1;
+    margin-top: -85px;
+  }
+
+  .cards:hover .about:hover {
+    opacity: 1;
+    margin-top: -105px;
+  }
+
+  .cards:hover .about:not(:hover) {
+    opacity: 1;
+    margin-top: -105px;
+  }
+
+  .cards:hover .card:not(:hover) p {
+    opacity: 0;
+  }
+
+  .cards:hover q {
+    opacity: 1;
+    margin-top: -85px;
+  }
+
+  .cards:hover .card:not(:hover) q {
+    opacity: 0;
+  }
+
+  
+  .cards:hover ul {
+    opacity: 1;
+    margin-top: -93px;
+  }
+
+  .cards:hover li {
+    font-size: smaller;
+  }
+
+  .cards:hover .card:not(:hover) li {
+    opacity: 0;
+  }
+
+  .cards:hover .card:not(:hover) {
+    filter: blur(5px); 
+  }
+  
+  .card-container {
+    padding: 20px;
+  }
+
+  .cards:hover .phone:hover {
+    opacity: 1;
+    margin-top: 70px;
+  }
+
+  .cards:hover .phone:not(:hover) {
+    opacity: 1;
+    margin-top: 70px;
+  }
+  
+ 
