@@ -8,7 +8,7 @@ body {
 
 .content{
     position:static;
-    margin-top:120px;
+    margin-top:90px;
     margin-left: 240px;
 }
 
@@ -43,7 +43,7 @@ body {
     transition: 0.3s;
     height: 200px;
     width: 30%;
-    margin: 20px;
+    margin: 40px;
     margin-left: 150px;
     float: left;
     background-color: white;
