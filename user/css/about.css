@@ -3,14 +3,13 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #F5F5F5;
 }
 
 .content{
     position:static;
-    height: 1000px;
     margin-top:120px;
-    margin-left: 300px;
-    background-color: rgb(171, 165, 165);
+    margin-left: 240px;
 }
 
 .content h2 {

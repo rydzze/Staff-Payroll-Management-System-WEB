@@ -17,11 +17,11 @@
 
 <body>    
   
-    <section class="bulletin"> 
-        <div class="bulletin-board">
-
-        <div class="slides">
-            <h2>Bulletin Board</h2>;
+  <section class="bulletin"> 
+    <div class="bulletin-board">
+      
+      <div class="slides">
+          <h2>Bulletin Board</h2>
           </div>
 
           <div class="slides">

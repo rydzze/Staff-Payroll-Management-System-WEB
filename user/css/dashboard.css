@@ -10,8 +10,7 @@
 .bulletin {
     height: 270px;
     width: 550px;
-    margin: 13%;
-    margin-left: 40%;
+    margin: 13% 13% 5% 40%;
     position: relative;
     background-color: #ffffff;
     padding: 20px;
@@ -101,9 +100,9 @@ p {
 }
 
 .announce {
-    margin-top:30px;
+    margin-top:10px;
     margin-left:390px;
-    height: 100px;
+    margin-bottom: 2%;
 }
 
 .announcement {

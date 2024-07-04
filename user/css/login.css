@@ -99,7 +99,7 @@ table{
 .login #submitButtonVerify{
     margin-top: 5%;
     margin-bottom: 28px;
-    margin-left: 75%;
+    float: right;
     background-color: #4A85F6;
     color: white;
     font-size: 20px;
@@ -109,4 +109,10 @@ table{
     height: 40px;
     border: none;
 }
+
+.checkbox {
+    text-align: right;
+    margin-right: 1em;
+}
+
 
