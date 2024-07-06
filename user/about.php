@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | About</title>
 
+    <link rel="icon" href="img/spms.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
 
-
-    <?php include 'templates/header.php';?>
-    <?php include 'templates/sidebar.php';?>
+<?php include 'templates/header.php';?>
+<?php include 'templates/sidebar.php';?>
 
 <body>
-<section class="content">
+  <section class="content">
     <div class="cards">
       <div class="card">
         <div class="card-container">

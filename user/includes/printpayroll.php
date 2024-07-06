@@ -11,7 +11,6 @@
         $staff_ID = $_SESSION['staff_ID'];
         $payroll_ID = $_GET['payroll_ID'];
 
-
         $sql = "SELECT p.person_fname, p.person_lname, p.person_IC, p.person_email, p.person_phonenum, p.person_homeaddr, a.payroll_ID, a.payroll_date, a.payroll_basicsalary, a.payroll_allowancepay, a.payroll_overtimepay, a.payroll_EPF, a.payroll_SOCSO, s.staff_department, s.staff_position
                 FROM person p
                 INNER JOIN staff s ON p.staff_ID = s.staff_ID
@@ -19,7 +18,7 @@
                 WHERE p.staff_ID = '$staff_ID' AND a.payroll_ID = '$payroll_ID'";
         $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
+        if($result->num_rows > 0){
             echo "<div class='companyname'><h1>SPMS</h1><br>
                 <h2>Pay Slip</h2></div>";
             
@@ -56,11 +55,10 @@
             echo "</table>";
 
             echo "</div>";
-            }
-
-            else {
+        }
+        else{
             echo "No data found.";
-            }
+        }
 
         $conn->close();
         ?>

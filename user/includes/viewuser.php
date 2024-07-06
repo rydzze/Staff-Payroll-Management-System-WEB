@@ -3,7 +3,7 @@ include 'db.php';
 
 $staff_ID = $_SESSION['staff_ID'];
 
-if (!isset($staff_ID)) {
+if(!isset($staff_ID)){
     echo "<script>alert('Staff ID not provided.'); window.location.href = 'staffs.php';</script>";
     exit;
 }
@@ -22,6 +22,5 @@ $position = $row["staff_position"];
 $email = $row["person_email"];
 $salary = $row["staff_basicsalary"];
 $hireddate = $row["staff_hireddate"];
-
 ?>
     

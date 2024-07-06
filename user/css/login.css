@@ -13,6 +13,7 @@
     top: -2%;
     left: -1%;
 }
+
 .login {
     margin-top: 10%;
     display: flex;
@@ -42,23 +43,6 @@
     font-weight: lighter;
     font-size: 25px;
     padding-right: 1%;
-}
-
-table{
-    height: max-content;
-    width: max-content;
-}
-
-.input{
-   margin-right: 0%;
-   margin-left: 20px;
-   background-color: #F5F5F5;
-   border: none;
-   border-radius: 10px;
-   padding: 2%;
-   font-size: 20px;
-   margin-top: 10px;
-   margin-bottom: 10px;
 }
 
 .login a{
@@ -115,4 +99,19 @@ table{
     margin-right: 1em;
 }
 
+table{
+    height: max-content;
+    width: max-content;
+}
 
+.input{
+   margin-right: 0%;
+   margin-left: 20px;
+   background-color: #F5F5F5;
+   border: none;
+   border-radius: 10px;
+   padding: 2%;
+   font-size: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}

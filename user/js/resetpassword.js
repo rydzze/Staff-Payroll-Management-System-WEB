@@ -1,4 +1,4 @@
-function myFunction1() {
+function visibilityPwd1(){
   var x = document.getElementById("new_password");
   if (x.type === "password") {
     x.type = "text";
@@ -6,7 +6,8 @@ function myFunction1() {
     x.type = "password";
   }
 }
-function myFunction2() {
+
+function visibilityPwd2(){
   var x = document.getElementById("confirm_password");
   if (x.type === "password") {
     x.type = "text";

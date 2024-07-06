@@ -14,9 +14,9 @@ if(isset($new_password) && isset($usr_ID)){
             
     if($conn->query($sql) === TRUE){
         echo "<script>
-            alert('Reset password successfully. Redirecting to login page ...');  
-            window.location = '../login.php'; 
-        </script>";    
+                alert('Reset password successfully. Redirecting to login page ...');  
+                window.location = '../login.php'; 
+              </script>";    
     }
     else{
         echo "<script>alert('Error resetting password ... " . $conn->error . "');</script>";

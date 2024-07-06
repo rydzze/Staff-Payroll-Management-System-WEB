@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | View Payroll</title>
 
+    <link rel="icon" href="img/spms.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/viewpayroll.css">
 </head>
@@ -17,7 +18,7 @@
     <?php include 'templates/sidebar.php';?>
 
     <section class="content"> 
-            <h1>View Payroll</h1>
+        <h1>View Payroll</h1>
 
         <div class="payrolllist">
             <h2>Payroll Records</h2>

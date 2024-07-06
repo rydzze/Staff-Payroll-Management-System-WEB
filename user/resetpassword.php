@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | Reset Password</title>
 
+    <link rel="icon" href="img/spms.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
@@ -26,8 +27,9 @@
                     <tr class="checkbox">
                         <!-- An element to toggle between password visibility -->
                         <td></td>
-                        <td colspan='2'>Show password<input type="checkbox" onclick="myFunction1()"></td>
+                        <td colspan='2'>Show password<input type="checkbox" onclick="visibilityPwd1()"></td>
                     </tr>
+
                     <tr class="uname">
                         <td><label for="confirm_password">Confirm new password:</label></td>
                         <td><input class="input" type="password" id="confirm_password" placeholder="Confirm new password" name="confirm_password" required></td>
@@ -35,14 +37,15 @@
                     <tr class="checkbox">
                         <!-- An element to toggle between password visibility -->
                         <td></td>
-                        <td colspan='2'>Show password<input type="checkbox" onclick="myFunction2()"></td>
+                        <td colspan='2'>Show password<input type="checkbox" onclick="visibilityPwd2()"></td>
                     </tr>
                 </table>
                 <input type="submit" id="submitButtonVerify" name="login" value="Submit">
             </div>
         </form>
     </section>
-    <script src="js/script.js"></script>
+    
+    <script src="js/resetpassword.js"></script>
 </body>
 
 </html>

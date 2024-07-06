@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPMS | OTP Verification</title>
 
+    <link rel="icon" href="img/spms.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
@@ -24,6 +25,7 @@
                         <td><input class="input" type="text" id="userOTP" placeholder="6 digits OTP code" name="otpinput" required></td>
                     </tr>
                 </table>
+                
                 <input type="submit" id="submitButtonVerify" name="login" value="Verify">
             </div>
         </form>

@@ -9,12 +9,12 @@ $otp = $_SESSION['otp'];
 if($input == $otp){
     echo "<script>
             window.location = '../resetpassword.php'; 
-        </script>";
+          </script>";
 }
 else{
     echo "<script>
             alert('Invalid OTP. Please try again.');  
             window.location = '../validateOTP.php'; 
-        </script>";
+          </script>";
 }
 ?>
